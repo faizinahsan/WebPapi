@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3>{{pkm.judul}}</h3>
+	<h3>{{pkm.pk}}</h3>
+	<h3>{{pkm.idUsers.username}}</h3>
+	<h3>{{pkm.idStatus.namaStatus}}</h3>
+	<h3>{{total}}</h3>
+	{% if total < pkm.idBidang.jumlahAnggota %}
+        <a href="{% url 'input-anggota' idPkm=pkm.pk %}">Tambah Anggota</a>
+    {% else %}
+        <a href="#">Anggota Sudah Penuh</a>
+    {% endif %}
+    {% for ang in anggota %}
+    	<h3>{{ang.namaAnggota}}</h3>
+    {% endfor %}
+</body>
+</html>

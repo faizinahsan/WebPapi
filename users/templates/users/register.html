@@ -21,39 +21,70 @@
             <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'login' %}">Informasi Dosen</a></div>
             <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'login' %}">Timeline</a></div>
             <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'login' %}">Format</a></div>
+            {% if user.is_authenticated %}
+            <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'login' %}">Profile</a></div>
+            {% else %}
             <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'login' %}">Login</a></div>
+            {% endif %}
         </div>
     </div>
+    {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
     <div class="register-photo" style="background-color: #FFFFFF;">
         <div class="form-container" style="background-color: #FDE3C8;">
-            <form method="post" style="background-color: #FDE3C8;">
-                <div class="illustration">
-                    <div class="form-row justify-content-center align-items-center">
-                        <div class="col-1"><img src="{% static 'papi/img/Logo.png'%}" style="width: 100px;height: 100px;color: #70c7e2;"></div>
-                        <div class="col-6">
-                            <p class="text-center" style="font-size: 72px;color: #70c7e2;font-weight: bold;">WebPapi</p>
-                        </div>
-                    </div>
+            <form method="POST" style="background-color: #FDE3C8;" action="{% url 'register' %}" >
+                {% csrf_token %}
+                <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username" style="background-color: #E5E5E5;"></div>
+                <div class="form-group"><input class="form-control" type="text" name="first_name" placeholder="First Name" style="background-color: #E5E5E5;"></div>
+                <div class="form-group"><input class="form-control" type="text" name="last_name" placeholder="Last Name" style="background-color: #E5E5E5;"></div>
+                <div class="form-group"><input class="form-control" type="email" id="email" name="email" placeholder="Email" style="background-color: #E5E5E5;"></div>
+                <div class="form-group"><input class="form-control" type="password" id="password1" name="password1" placeholder="Password" style="background-color: #E5E5E5;"></div>
+                <div class="form-group"><input class="form-control" type="password" id="password2" name="password2" placeholder="Password (repeat)" style="background-color: #E5E5E5;"></div>
+                <div class="form-group"><input class="form-control" type="number" name="kontak" placeholder="No HP" style="background-color: #E5E5E5;"></div>
+                <div class="form-group"><input class="form-control" type="number" name="npm" placeholder="NPM"  style="background-color: #E5E5E5;"></div>           
+                <div class="form-group"><label class="text-center" style="font-weight: normal;">Fakultas</label>
+                    <select class="form-control" name="fakultas" style="background-color: #E5E5E5;">
+                        <optgroup label="Fakultas">
+                            <option value="12" selected="">MIPA</option><option value="13">PIK</option>
+                            <option value="14">Kedokteran</option>
+                            <option value="">Ekonomi Bisnis</option>
+                            <option value="">Hukum</option>
+                        </optgroup>
+                    </select>
                 </div>
-                <div class="col">
-                    <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Padjadjaran Goes To Pimnas<br></p>
+                <div class="form-group"><label class="text-center" style="font-weight: normal;">Jurusan</label>
+                    <select class="form-control" name="jurusan" style="background-color: #E5E5E5;">
+                        <optgroup label="Jurusan">
+                            <option value="12" selected="">Teknik Informatika</option>
+                            <option value="13">Fisika</option><option value="14">Kedokteran</option>
+                            <option value="">Ekonomi Bisnis</option><option value="">Hukum</option>
+                        </optgroup>
+                    </select>
                 </div>
-                <div class="form-group"><input class="form-control" type="text" name="nama" placeholder="Nama Lengkap" style="background-color: #E5E5E5;"></div>
-                <div class="form-group"><input class="form-control" type="number" name="npm" placeholder="NPM" max="13" style="background-color: #E5E5E5;"></div>
-                <div class="form-group"><label class="text-center" style="font-weight: normal;">Fakultas</label><select class="form-control" name="Fakutlas" style="background-color: #E5E5E5;"><optgroup label="Fakultas"><option value="12" selected="">MIPA</option><option value="13">PIK</option><option value="14">Kedokteran</option><option value="">Ekonomi Bisnis</option><option value="">Hukum</option></optgroup></select></div>
-                <div
-                    class="form-group"><label class="text-center" style="font-weight: normal;">Jurusan</label><select class="form-control" name="Fakutlas" style="background-color: #E5E5E5;"><optgroup label="Fakultas"><option value="12" selected="">Teknik Informatika</option><option value="13">Fisika</option><option value="14">Kedokteran</option><option value="">Ekonomi Bisnis</option><option value="">Hukum</option></optgroup></select></div>
-        <div
-            class="form-group"><input class="form-control" type="number" name="nomor" placeholder="No HP" max="13" style="background-color: #E5E5E5;"></div>
-    <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" style="background-color: #E5E5E5;"></div>
-    <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password" style="background-color: #E5E5E5;"></div>
-    <div class="form-group"><input class="form-control" type="password" name="password-repeat" placeholder="Password (repeat)" style="background-color: #E5E5E5;"></div>
-    <div class="form-group">
-        <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox">I agree to the license terms.</label></div>
+                <div class="checkbox-row">
+                    <input type="checkbox" name="is_student" id="id_is_student" checked="checked" style="opacity:0;" value="True">
+                </div>
+                <!-- {{form.as_p}}
+                {{m_form.as_p}} -->
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: #ffa883;">Register</button></div>                
+            </form>
+        </div>
     </div>
-    <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: #FFA883;color: #FAF2E8;">Sign Up</button></div><a href="#" class="already">You already have an account? Login here.</a></form>
-    </div>
-    </div>
+
+
+
     <div class="container-fluid text-center d-inline-block" style="background-image: url(&quot;{% static 'papi/img/FooterRevisi.png' %}&quot;);background-position: top;background-size: contain;">
         <div style="min-height: 50px;"></div>
         <p style="font-size: 30px;font-weight: bold;color: #ffffff;">Cyber Developer</p>
