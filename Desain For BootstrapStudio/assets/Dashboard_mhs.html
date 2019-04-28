@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>WebPapi</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark navbar-fixed-top">
+  <a  class="navbar-brand" href="home.html" >WebPapi</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Info dosen</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Info PKM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Timeline</a>
+      </li>
+      </ul>
+   </div>
+</nav>
+    </div>
+</div>
+    <!--<div class="container-fluid text-center d-inline-block" style="background-image: url(&quot;assets/img/Header.png&quot;);background-position: 100% 50%;background-size: contain;background-repeat: round;min-height: 110px;margin-top: 0px;padding: 0px;">
+        <div class="row text-center justify-content-center align-items-center align-content-center mx-auto" style="margin-top: 20px;background-position: center;background-size: contain;background-repeat: repeat;">
+            <div class="col text-center"><button class="btn btn-primary btn-lg text-center border rounded-0" type="button" style="width: 200px;">Infromasi PKM</button></div>
+            <div class="col text-center"><button class="btn btn-primary btn-lg" type="button" style="width: 200px;">Informasi Dosen</button></div>
+            <div class="col text-center"><button class="btn btn-primary btn-lg" type="button" style="width: 200px;">Timeline</button></div>
+            <div class="col text-center"><button class="btn btn-primary btn-lg" type="button" style="width: 200px;">Format</button></div>
+            <div class="col text-center"><button class="btn btn-primary btn-lg" type="button" style="width: 200px;">Login</button></div>
+        </div>
+    </div> -->
+    <div class="container-fluid text-center " style="background-image: url(&quot;assets/img/Head.jpg&quot;);background-position: top;background-size: auto;">
+        <div style="min-height: 280px;"></div>
+
+    </div>
+    <div class="login-clean" style="background-color: #FAF1E8;">
+        <form class="border rounded" method="post" style="min-width: 900px;background-color: #FDE3C8;">
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"></div>
+            <div class="form-row">
+                <div class="col">
+                    <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Kamu punya proposal PKM yang ingin diajukan?<br></p>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Ayo Upload Sekarang!<br></p>
+                </div>
+            </div>
+            <div class="form-group"><input class="form-control" type="text" placeholder="Judul PKM" style="background-color: #e5e5e5;"></div>
+            <div class="form-group"><input class="form-control" type="text" placeholder="Nama Ketua" style="background-color: #e5e5e5;"></div>
+
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormMhsFakultas" style="background-color: #e5e5e5";>
+    <option selected>Fakultas</option>
+    <option value="1">FH</option>
+    <option value="2">FEB</option>
+    <option value="3">FK</option>
+    <option value="4">FMIPA</option>
+    <option value="5">Faperta</option>
+    <option value="6">FKG</option>
+    <option value="7">FIB</option>
+    <option value="8">FISIP</option>
+    <option value="9">Fapsi</option>
+    <option value="10">Fapet</option>
+    <option value="11">Fikom</option>
+    <option value="12">Fkep</option>
+    <option value="13">FPIK</option>
+    <option value="14">FTIP</option>
+    <option value="15">Farmasi</option>
+    <option value="16">FTG</option>
+  </select>
+            <label>File PKM (.docx)</label>
+            <div><input class="form-control" type="file" name="uploadPKM" placeholder="uploadPKM" style="background-color: #e5e5e5;"></div>
+            <div class="form-group"><input class="form-control" type="text" placeholder="Deskripsi singkat Proposal" style="background-color: #e5e5e5;"></div>
+
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormMhsSelectBidang" style="background-color: #e5e5e5";>
+    <option selected>Bidang PKM</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormMhsSelectKategori" style="background-color: #e5e5e5";>
+    <option selected>Kategori PKM</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: #ffa883;">Upload</button></div>
+            
+        </form>
+        <div class="login-clean" style="background-color: #FAF1E8;">
+        <form class="border rounded" method="post" style="min-width: 900px;background-color: #FDE3C8;">
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"></div>
+            <div class="form-row">
+                <div class="col">
+                    <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Daftarkan juga anggota tim dan Dosen Pembimbingmu untuk mendapatkan notifikasi E-mail<br></p>
+                </div>
+            </div>
+            <div class="form-group">
+        <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: #ffa883;">Input Anggota</button></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: #ffa883;">Input Dosen Pembimbing</button></div>
+    </div>
+    </form>
+     <div class="container-fluid text-center d-inline-block" style="background-image: url(&quot;assets/img/FooterRevisi.png&quot;);background-position: top;background-size: auto;">
+        <div style="min-height: 100px;"></div>
+        <p style="font-size: 12px;font-weight: bold;color: #ffffff;">@ 2019 Cyber Developer</p>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
