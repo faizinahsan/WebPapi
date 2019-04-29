@@ -21,6 +21,7 @@ from django.contrib.auth import views as auth_views
 from users import views as users_views
 urlpatterns = [
     path('', include('papi.urls')),
+    path('bem/', include('bempapi.urls')),
     path('admin/', admin.site.urls),
     # Perlu diubah untuk Login sesuai projek lost found
     path('login/',auth_views.LoginView.as_view(template_name='users/login.html') ,name='login'),

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'papi.apps.PapiConfig',
     'users.apps.UsersConfig',
+    'bempapi.apps.BempapiConfig',
 ]
 
 MIDDLEWARE = [
