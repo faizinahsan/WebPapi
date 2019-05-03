@@ -16,5 +16,18 @@ class Dosen(models.Model):
 class Mahasiswa(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True)
     npm = models.IntegerField(blank=True, null=True)
-    fakultas =models.IntegerField(blank=True, null=True)
-    jurusan = models.IntegerField(blank=True, null=True)
+    fakultas = models.ForeignKey('Fakultas',on_delete=models.CASCADE,default=0)
+    jurusan = models.ForeignKey('Jurusan',on_delete=models.CASCADE,default=0)
+    # fakultas =models.IntegerField(blank=True, null=True)
+    # jurusan = models.IntegerField(blank=True, null=True)
+    def __str__(self):
+        return f'{self.user}'
+class Fakultas(models.Model):
+    namaFakultas = models.CharField(max_length=10,default="")
+    def __str__(self):
+        return f'{self.namaFakultas}'
+class Jurusan(models.Model):
+    namaJurusan = models.CharField(max_length=100,default="")
+    idFakultas= models.ForeignKey("Fakultas",on_delete=models.CASCADE,default=0)
+    def __str__(self):
+        return f'{self.namaJurusan}'

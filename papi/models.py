@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
-
+from users.models import Fakultas,Jurusan
 User = get_user_model() 
 
 # Create your models here.
@@ -14,6 +14,7 @@ class ProposalPKM(models.Model):
     idKategori = models.ForeignKey('KategoriPKM',on_delete=models.CASCADE,default=0)
     idBidang = models.ForeignKey('BidangPKM',on_delete=models.CASCADE,default=0)
     idStatus = models.ForeignKey('StatusRevisi',on_delete=models.CASCADE,default=0)
+    idFakultas = models.ForeignKey(Fakultas,on_delete=models.CASCADE,default=0)
     def __str__(self):
         return f'{self.pk}'
 class KategoriPKM(models.Model):

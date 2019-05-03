@@ -2,12 +2,14 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from .forms import RegistrationForm,MahasiswaRegisForm,DosenRegisForm
 from django.contrib import messages
-
+from .models import Fakultas,Jurusan
 from django.contrib.auth import get_user_model
 User = get_user_model()
 # Create your views here.
 # For Student
 def register(request):
+    fakultas = Fakultas.objects.all()
+    jurusan = Jurusan.objects.all()
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         m_form = MahasiswaRegisForm(request.POST)
@@ -35,7 +37,13 @@ def register(request):
     else:
         form = RegistrationForm()
         m_form = MahasiswaRegisForm()
-    return render(request,'users/register.html',{'form':form,'m_form':m_form})
+    context = {
+        'form':form,
+        'm_form':m_form,
+        'jurusan':jurusan,
+        'fakultas':fakultas,
+    }
+    return render(request,'users/register.html',context)
 def register_dosen(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)

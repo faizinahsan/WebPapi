@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <h1>Ini Web Akumulasi</h1>
+    <h1>Jumlah PKM : {{pkm.count}}</h1>
+    <h1>Belum Direvisi  : {{notrevisied.count}}</h1>
+    <h1>On Progress : {{onprogress.count}}</h1>
+    <h1>Revisied : {{revisied.count}}</h1>
+    <h1>FMIPA : {{ fmipa }}</h1>
+    <h1>Top 5 Fakultas</h1>
+{#     {% for key,value in total.items %}#}
+{#                        <div class="panel-body">{{key}} :{{value}}</b></div>#}
+{#                    {% endfor %}#}
+{#    <p>{{ fakultas }}</p>#}
+    {% for namaFakultas,hasil in fakultas.items %}
+        <p>{{ namaFakultas }}: </p>
+        {% for key,value in hasil.items %}
+            <p>{{ key }}: {{value}}</p>
+        {% endfor %}
+        
+    {% endfor %}
+
+    {% for proposal in pkm %}
+        <p>{{proposal.judul}}</p>
+        <p>{{proposal.idStatus.namaStatus}}</p>
+        <p>{{proposal.idUsers.mahasiswa.fakultas.namaFakultas}}</p>
+        <br>
+    {% endfor %}
+    
+</body>
+</html>
