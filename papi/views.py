@@ -1,7 +1,8 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse
 from .forms import UploadPKMForm,AnggotaPKMForm,MultipleInputForm
-from .models import ProposalPKM,Anggota,BidangPKM
+from .models import ProposalPKM,Anggota,BidangPKM,KategoriPKM
+from users.models import Fakultas
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 User = get_user_model()
@@ -10,20 +11,25 @@ def index(request):
     return render(request,'papi/index.html')
 @login_required
 def upload_pkm(request):
+    bidang = BidangPKM.objects.all()
+    kategori = KategoriPKM.objects.all()
+    fakultas = Fakultas.objects.all()
     if request.method == 'POST':
         form = UploadPKMForm(request.POST,request.FILES)
         if form.is_valid():
             u_form = form.save(commit=False)
             u_form.idUsers = request.user
-            # idPKM = ProposalPKM.objects.get(pk=u_form.pk)
             u_form.save()
             return redirect('proposal-pkm',idPkm=u_form.pk)
     else:
         form = UploadPKMForm()
     context = {
         'u_form':form,
+        'bidang':bidang,
+        'kategori':kategori,
+        'fakultas':fakultas,
     }
-    return render(request,'papi/upload_page.html',context)
+    return render(request,'papi/Dashboard_mhs.html',context)
 @login_required
 def input_anggota(request,idPkm):
     pkm = get_object_or_404(ProposalPKM, pk=idPkm)

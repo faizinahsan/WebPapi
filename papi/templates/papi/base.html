@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebPapi</title>
+    <link rel="stylesheet" href="{% static 'papi/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{%  static 'papi/css/Login-Form-Clean.css'%}">
+    <link rel="stylesheet" href="{% static 'papi/css/Registration-Form-with-Photo.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark navbar-fixed-top">
+  <a  class="navbar-brand" href="home.html" >WebPapi</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Info dosen</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Info PKM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Timeline</a>
+      </li>
+      </ul>
+   </div>
+</nav>
+{% block content %}
+
+{% endblock %}
+
+     <div class="container-fluid text-center d-inline-block" style="background-image: url({% static 'papi/img/FooterRevisi.png' %});background-position: top;background-size: auto;">
+        <div style="min-height: 100px;"></div>
+        <p style="font-size: 12px;font-weight: bold;color: #ffffff;">@ 2019 Cyber Developer</p>
+    </div>
+</body>
+</html>
