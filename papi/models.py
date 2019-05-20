@@ -9,6 +9,7 @@ class ProposalPKM(models.Model):
     judul = models.CharField(max_length =50)
     namaKetua = models.CharField(max_length=50)
     deskripsi = models.TextField(default = '')
+    createdDate = models.DateTimeField(default=timezone.now)
     document = models.FileField(upload_to='proposal',default = 'ProposalDefault.txt')
     idUsers = models.ForeignKey(User, on_delete=models.CASCADE)
     idDosenReviewer = models.ForeignKey(Dosen,on_delete=models.CASCADE,default=1)
@@ -35,10 +36,16 @@ class Anggota(models.Model):
     namaAnggota= models.CharField(max_length=20)
     npmAnggota = models.CharField(max_length=13,default="")
     emailAnggota = models.EmailField(null=True)
-    idKetua = models.ForeignKey(User,on_delete=models.CASCADE,null =True)
-    idPkm = models.ForeignKey('ProposalPKM',on_delete=models.CASCADE,null =True)
+    idKetua = models.ForeignKey(User,on_delete=models.CASCADE,default=1)
     def __str__(self):
         return f'{self.namaAnggota}'
+class DosenPembimbing(models.Model):
+    namaDosen= models.CharField(max_length=20)
+    nipDosen = models.CharField(max_length=13,default="")
+    emailDosen = models.EmailField(null=True)
+    idKetua = models.ForeignKey(User,on_delete=models.CASCADE,default=1)
+    def __str__(self):
+        return f'{self.namaDosen}'
 class LogHistoryPKM(models.Model):
     tanggal = models.DateTimeField(default=timezone.now)
     document = models.ForeignKey('ProposalPKM',on_delete=models.CASCADE,null=True)

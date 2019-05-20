@@ -32,4 +32,4 @@ class MahasiswaRegisForm(forms.ModelForm):
 class DosenRegisForm(forms.ModelForm):
     class Meta:
         model = Dosen
-        fields=('nip','bidang')
+        fields=('nip','bidang','fakultas')

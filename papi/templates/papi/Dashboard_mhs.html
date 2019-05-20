@@ -55,7 +55,9 @@
                             <p class="card-text">Input data anggota untuk mendapatkan notifikasi email. Tidak perlu menginput ulang data ketua tim</p>
                         </div>
                         <div class="card-footer text-center bg-white">
-                            <a class="btn btn-outline-secondary" href="{% url 'input-anggota' idPkm=1 %}">Tambah</a>
+                            {% if anggota.count < pkms.idBidang.jumlahAnggota  %}
+                                <a class="btn btn-outline-secondary" href="{% url 'input-anggota' %}">Tambah</a>
+                            {% endif %}
                             <a class="btn btn-outline-secondary" href="#">Ubah</a>
                             <a class="btn btn-outline-secondary" href="#">Lihat</a>
                         </div>
@@ -72,7 +74,9 @@
                             <p class="card-text">Input data dosen pembimbing untuk mendapatkan notifikasi email. Input email dosen pembimbing yang paling sering digunakan.</p>
                         </div>
                         <div class="card-footer text-center bg-white">
-                            <a class="btn btn-outline-secondary" href="{% url 'input-dospem' %}">Tambah</a>
+                            {% if dospem == null%}
+                                <a class="btn btn-outline-secondary" href="{% url 'input-dospem' %}">Tambah</a>
+                            {% endif %}
                             <a class="btn btn-outline-secondary" href="#">Ubah</a>
                             <a class="btn btn-outline-secondary" href="#">Lihat</a>
                         </div>

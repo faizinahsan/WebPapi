@@ -1,0 +1,9 @@
+artificiall intelegent untuk mencari topik dari suatu ayat alquran
+
+artificiall intelegent untuk auto tag topik dari suatu ayat alquran
+
+deskripsi:
+AI akan bisa mengkategorikan topik" dari suatu ayat alquran sehingga manusia bisa mencari topik alquran walaupun mereka tidak tahu
+topiknya di bagian mana
+contoh:
+Rudi ingin tau ayat alquran tentang Rezeki manusia maka AI akan menunjukan ayat alquran yang berkaitan dengannya. 

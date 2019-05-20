@@ -58,6 +58,7 @@ def register_dosen(request):
             user.email = email
             user.dosen.nip = m_form.cleaned_data.get('nip')
             user.dosen.bidang = m_form.cleaned_data.get('bidang')
+            user.dosen.fakultas = m_form.cleaned_data.get('fakultas')
             user.save()
             messages.success(request,f'Account created for {email}!')
             return redirect('index')

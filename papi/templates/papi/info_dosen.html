@@ -40,27 +40,17 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">19600212 198701 1 001</th>
-                            <td>R. Sudrajat , Drs., M.Si.</td>
-                            <td>MIPA</td>
-                            <td>PKM-KC</td>
-                            <td>Teknologi</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">19600212 198701 1 002</th>
-                            <td>Akik Hidayat , Drs., M.Kom.</td>
-                            <td>MIPA</td>
-                            <td>PKM-K</td>
-                            <td>IT</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">19600212 198701 1 003</th>
-                            <td>Dr. Asep Sholahuddin ., MT.</td>
-                            <td>MIPA</td>
-                            <td>PKM-K</td>
-                            <td>IT</td>
-                        </tr>
+                        {% for dos in dosen %}
+                            <tr>
+                                <th scope="row">{{ dos.nip }}</th>
+                                <td>{{ dos.user.first_name }} {{ dos.user.last_name }}</td>
+                                <td>{{ dos.fakultas.namaFakultas }}</td>
+                                <td>PKM-KC</td>
+                                <td>{{ dos.bidang.namaKategori }}</td>
+                            </tr>
+                        {% endfor %}
+
+
                         </tbody>
                     </table>
                 </div>

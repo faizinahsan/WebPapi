@@ -1,5 +1,5 @@
 from django import forms
-from .models import ProposalPKM,Anggota,CobaMultipleInput
+from .models import ProposalPKM,Anggota,CobaMultipleInput,DosenPembimbing
 # from .models import Registration
 class UploadPKMForm(forms.ModelForm):
     class Meta:
@@ -9,6 +9,10 @@ class AnggotaPKMForm(forms.ModelForm):
     class Meta:
         model = Anggota
         fields = ('namaAnggota','npmAnggota','emailAnggota')
+class DosenPembimbingForm(forms.ModelForm):
+    class Meta:
+        model = DosenPembimbing
+        fields = ('namaDosen','nipDosen','emailDosen')
 class MultipleInputForm(forms.ModelForm):
     class Meta:
         model = CobaMultipleInput

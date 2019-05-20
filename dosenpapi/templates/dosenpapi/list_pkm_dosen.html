@@ -51,8 +51,10 @@
                                 <td>{{ pkm.idBidang.namaBidang }}</td>
                                 <td>{{ pkm.idKategori.namaKategori }}</td>
                                 <td>{{ pkm.judul }}</td>
-                                <td><button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Download</button></td>
-                                <td><button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Upload Revisi</button></td>
+                                {% if pkm.idStatus != 3 %}
+                                    <td><button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Download</button></td>
+                                    <td><button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Upload Revisi</button></td>
+                                {% endif %}
                             </tr>
                         {% endfor %}
                         </tbody>

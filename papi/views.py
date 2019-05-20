@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse
-from .forms import UploadPKMForm,AnggotaPKMForm,MultipleInputForm
-from .models import ProposalPKM,Anggota,BidangPKM,KategoriPKM
+from .forms import UploadPKMForm,AnggotaPKMForm,MultipleInputForm,DosenPembimbingForm
+from .models import ProposalPKM,Anggota,BidangPKM,KategoriPKM,DosenPembimbing
 from users.models import Fakultas,Dosen
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
@@ -20,7 +20,7 @@ def upload_pkm(request):
             u_form = form.save(commit=False)
             u_form.idUsers = request.user
             u_form.save()
-            return redirect('dashboard-mhs',idPkm=u_form.pk)
+            return redirect('dashboard-mhs')
     else:
         form = UploadPKMForm()
     context = {
@@ -31,19 +31,17 @@ def upload_pkm(request):
     }
     return render(request,'papi/uploadDashboard_mhs.html',context)
 @login_required
-def input_anggota(request,idPkm):
-    pkm = get_object_or_404(ProposalPKM, pk=idPkm)
+def input_anggota(request):
     if request.method == 'POST':
         a_form = AnggotaPKMForm(request.POST)
         if a_form.is_valid():
             aform = a_form.save(commit=False)
             aform.idKetua = request.user
-            aform.idPkm = pkm
             aform.save()
-        return redirect('proposal-pkm',idPkm=pkm.pk)
+        return redirect('dashboard-mhs')
     else:
         a_form = AnggotaPKMForm()
-    return render(request,'papi/input_anggota.html',{'a_form':a_form,'pkm':pkm})
+    return render(request,'papi/input_anggota.html',{'a_form':a_form})
 def coba_multiple_input(request):
     listAnggota = []
     for i in range (0,5):
@@ -83,8 +81,26 @@ def log_file(request):
 def list_format(request):
     return render(request,'papi/list_format.html')
 def dashboard_mhs(request):
-    return render(request,'papi/dashboard_mhs.html')
+    pkms = ProposalPKM.objects.filter(idUsers=request.user).order_by('-createdDate').first()
+    anggota = Anggota.objects.filter(idKetua=request.user)
+    dospem = DosenPembimbing.objects.filter(idKetua=request.user)
+    print("Id:",pkms.pk,"Judul:",pkms.judul,"Jumlah Anggota:",anggota.count())
+    context={
+        'pkms':pkms,
+        'anggota':anggota,
+        'dospem':dospem,
+    }
+    return render(request,'papi/dashboard_mhs.html',context)
 def input_dospem(request):
-    return render(request,'papi/input_dospem.html')
+    if request.method == 'POST':
+        a_form = DosenPembimbingForm(request.POST)
+        if a_form.is_valid():
+            aform = a_form.save(commit=False)
+            aform.idKetua = request.user
+            aform.save()
+        return redirect('dashboard-mhs')
+    else:
+        a_form = DosenPembimbingForm()
+    return render(request,'papi/input_dospem.html',{'aform:':a_form})
 def timeline_mahasiswa(request):
     return render(request,'papi/timeline.html')

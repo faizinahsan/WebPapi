@@ -35,7 +35,7 @@
                 {% endif %}
             {% endif %}
             {% if user.is_authenticated %}
-                {% if user.is_teacher and user.is_teacher %}
+                {% if user.is_teacher or user.is_student %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'info-dosen' %}">Info dosen</a>
                     </li>
@@ -75,7 +75,7 @@
         <ul class="nav navbar-nav navbar-right">
 
             {% if user.is_authenticated %}
-                {% if user.is_student and user.is_teacher %}
+                {% if user.is_student or user.is_teacher %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'list-format' %}">Download Format</a>
                     </li>
