@@ -2,10 +2,154 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8efe653a-a851-4dc1-b3b2-273fdb3fbd43" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/WebPapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebPapi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - File Log.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - Home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - Informasi Dosen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - Informasi_Dosen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - Profil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - Register Dosen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - Register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - Timeline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - Upload Format.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - dashboard_mhs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - dashboard_pengurus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - dashboard_reviewer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - header+footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - input_anggota.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - input_dospem.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - list_format.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - list_format_pengurus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - list_pkm_pengurus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - list_pkm_rev_reviewer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - list_pkm_unrev_reviewer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - manage_dosen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - manage_dosen_next.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/D - upload_PKM.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bempapi/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bempapi/templates/bempapi/list_format_pengurus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bempapi/templates/bempapi/list_pkm_pengurus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bempapi/templates/bempapi/manage_dosen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bempapi/templates/bempapi/manage_dosen_next.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dosenpapi/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dosenpapi/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dosenpapi/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dosenpapi/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dosenpapi/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dosenpapi/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dosenpapi/templates/dosenpapi/dashboard_dosen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dosenpapi/templates/dosenpapi/list_pkm_dosen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dosenpapi/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dosenpapi/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dosenpapi/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papi/migrations/0021_auto_20190505_2331.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papi/migrations/0022_proposalpkm_iddosenreviewer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papi/migrations/0023_loghistorypkm_document.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papi/migrations/0024_auto_20190509_2058.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papi/migrations/0025_auto_20190509_2100.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papi/templates/papi/download_format.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papi/templates/papi/file_log.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papi/templates/papi/index_old.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papi/templates/papi/info_dosen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papi/templates/papi/list_format.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/papi/templates/papi/timeline.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/migrations/0009_auto_20190505_2317.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/migrations/0010_auto_20190505_2319.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/migrations/0011_auto_20190505_2331.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/migrations/0012_auto_20190505_2351.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/profil.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/Dashboard_pengurus.html" beforeDir="false" afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/Dashboard_pengurus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/Dashboard_mhs.html" beforeDir="false" afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/Dashboard_mhs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/WebPapi.bsdesign" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/Dashboard_mhs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/File Log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/Login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/Profil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/Register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/Sign Up.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/css/Login-Form-Clean.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/css/Registration-Form-with-Photo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/fonts/ionicons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/fonts/ionicons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/fonts/ionicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/fonts/ionicons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/fonts/ionicons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/img/Footer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/img/FooterRevisi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/img/Header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/img/HeaderRevisi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/img/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/img/meeting.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/assets/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/css/Login-Form-Clean.css" beforeDir="false" afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/css/Login-Form-Clean.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/css/Registration-Form-with-Photo.css" beforeDir="false" afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/css/Registration-Form-with-Photo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/download_format.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/fonts/ionicons.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/fonts/ionicons.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/fonts/ionicons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/fonts/ionicons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/header+footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/input_anggota.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/input_dospem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/list_pkm_pengurus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/list_pkm_reviewer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/untitled-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/untitled-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/untitled-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/untitled-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/untitled-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/assets/untitled.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/dashboard_pengurus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/input_anggota.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/input_dospem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/proposal_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/untitled-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/untitled-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/untitled-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desain For BootstrapStudio/untitled-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebPapi/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebPapi/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebPapi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebPapi/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bempapi/templates/bempapi/akumulasi_pkm.html" beforeDir="false" afterPath="$PROJECT_DIR$/bempapi/templates/bempapi/akumulasi_pkm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bempapi/templates/bempapi/dashboard_pengurus.html" beforeDir="false" afterPath="$PROJECT_DIR$/bempapi/templates/bempapi/dashboard_pengurus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bempapi/templates/bempapi/manage_pkm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bempapi/templates/bempapi/timeline_pkm.html" beforeDir="false" afterPath="$PROJECT_DIR$/bempapi/templates/bempapi/timeline_pkm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bempapi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bempapi/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bempapi/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bempapi/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/papi/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/papi/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/static/papi/background/HeaderTwo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/static/papi/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/papi/static/papi/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/static/papi/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/papi/static/papi/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/static/papi/css/Login-Form-Clean.css" beforeDir="false" afterPath="$PROJECT_DIR$/papi/static/papi/css/Login-Form-Clean.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/static/papi/css/Registration-Form-with-Photo.css" beforeDir="false" afterPath="$PROJECT_DIR$/papi/static/papi/css/Registration-Form-with-Photo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/static/papi/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/papi/static/papi/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/static/papi/fonts/ionicons.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/papi/static/papi/fonts/ionicons.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/static/papi/fonts/ionicons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/papi/static/papi/fonts/ionicons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/static/papi/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/papi/static/papi/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/templates/papi/Dashboard_mhs.html" beforeDir="false" afterPath="$PROJECT_DIR$/papi/templates/papi/Dashboard_mhs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/templates/papi/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/papi/templates/papi/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/templates/papi/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/papi/templates/papi/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/templates/papi/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/papi/templates/papi/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/templates/papi/input_anggota.html" beforeDir="false" afterPath="$PROJECT_DIR$/papi/templates/papi/input_anggota.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/templates/papi/input_dospem.html" beforeDir="false" afterPath="$PROJECT_DIR$/papi/templates/papi/input_dospem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/papi/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/papi/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/papi/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/registerdosen.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/registerdosen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,38 +201,59 @@
         </counts>
       </usages-collector>
     </session>
-    <session id="-1598756913">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
     <session id="382131529">
-      <usages-collector id="statistics.lifecycle.project">
+      <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="git.branch.checkout.local" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="2" />
+          <entry key="css" value="1" />
+          <entry key="html" value="94" />
+          <entry key="py" value="76" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="94" />
+          <entry key="Python" value="76" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages">
+      <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="git.branch.checkout.remote" value="2" />
+          <entry key="html" value="6077" />
+          <entry key="py" value="4290" />
+          <entry key="py@WebPapi" value="148" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CommandLine" value="148" />
+          <entry key="HTML" value="6077" />
+          <entry key="Python" value="4290" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="17" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.148" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.59" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
     </session>
@@ -96,13 +261,80 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/papi/templates/papi/input_anggota.html">
+        <entry file="file://$PROJECT_DIR$/papi/templates/papi/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="468">
+              <caret line="108" selection-start-line="108" selection-end-line="109" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/list_pkm_pengurus.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="804">
+              <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/list_format_pengurus.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="118" column="24" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
               <folding>
-                <element signature="n#style#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/papi/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/manage_dosen_next.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="882">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bempapi/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+                <marker date="1558121056131" expanded="true" signature="224:229" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/timeline_pkm.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -110,75 +342,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bempapi/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+            <state relative-caret-position="1470">
+              <caret line="76" column="60" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <marker date="1558118762634" expanded="true" signature="2153:2222" ph="..." />
+                <marker date="1558118762634" expanded="true" signature="2992:2997" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/akumulasi_pkm.html">
+        <entry file="file://$PROJECT_DIR$/papi/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/manage_pkm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+            <state relative-caret-position="-876">
+              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/timeline_pkm.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/papi/templates/papi/proposal_page.html">
+        <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/manage_dosen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/papi/templates/papi/upload_page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/papi/templates/papi/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+            <state relative-caret-position="181">
+              <caret line="54" column="59" lean-forward="true" selection-start-line="54" selection-start-column="59" selection-end-line="54" selection-end-column="59" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/papi/templates/papi/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -189,34 +380,77 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>login</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bempapi/models.py" />
-        <option value="$PROJECT_DIR$/papi/templates/papi/proposal_page.html" />
-        <option value="$PROJECT_DIR$/users/admin.py" />
-        <option value="$PROJECT_DIR$/users/views.py" />
-        <option value="$PROJECT_DIR$/users/templates/users/register.html" />
-        <option value="$PROJECT_DIR$/users/models.py" />
-        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/akumulasi_pkm.html" />
-        <option value="$PROJECT_DIR$/bempapi/urls.py" />
-        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/manage_pkm.html" />
         <option value="$PROJECT_DIR$/papi/templates/papi/upload_page.html" />
-        <option value="$PROJECT_DIR$/papi/models.py" />
+        <option value="$PROJECT_DIR$/papi/templates/papi/homepage.html" />
+        <option value="$PROJECT_DIR$/papi/templates/papi/download_format.html" />
         <option value="$PROJECT_DIR$/papi/forms.py" />
         <option value="$PROJECT_DIR$/papi/templates/papi/Dashboard_mhs.html" />
-        <option value="$PROJECT_DIR$/papi/urls.py" />
-        <option value="$PROJECT_DIR$/papi/templates/papi/base.html" />
-        <option value="$PROJECT_DIR$/papi/views.py" />
+        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/manage_pkm.html" />
+        <option value="$PROJECT_DIR$/users/models.py" />
+        <option value="$PROJECT_DIR$/WebPapi/settings.py" />
+        <option value="$PROJECT_DIR$/WebPapi/urls.py" />
+        <option value="$PROJECT_DIR$/dosenpapi/urls.py" />
+        <option value="$PROJECT_DIR$/papi/models.py" />
+        <option value="$PROJECT_DIR$/dosenpapi/forms.py" />
+        <option value="$PROJECT_DIR$/dosenpapi/views.py" />
+        <option value="$PROJECT_DIR$/papi/templates/papi/list_format.html" />
+        <option value="$PROJECT_DIR$/papi/templates/papi/file_log.html" />
+        <option value="$PROJECT_DIR$/papi/templates/papi/info_dosen.html" />
+        <option value="$PROJECT_DIR$/papi/templates/papi/index.html" />
         <option value="$PROJECT_DIR$/papi/templates/papi/input_anggota.html" />
+        <option value="$PROJECT_DIR$/papi/templates/papi/input_dospem.html" />
+        <option value="$PROJECT_DIR$/papi/templates/papi/dashboard_mhs.html" />
+        <option value="$PROJECT_DIR$/users/templates/users/profil.html" />
+        <option value="$PROJECT_DIR$/papi/urls.py" />
+        <option value="$PROJECT_DIR$/papi/templates/papi/timeline.html" />
+        <option value="$PROJECT_DIR$/users/templates/users/D - Login.html" />
+        <option value="$PROJECT_DIR$/users/templates/users/login.html" />
+        <option value="$PROJECT_DIR$/users/templates/users/D - Register.html" />
+        <option value="$PROJECT_DIR$/Desain For BootstrapStudio/D - Register.html" />
+        <option value="$PROJECT_DIR$/users/templates/users/register.html" />
+        <option value="$PROJECT_DIR$/users/templates/users/D - Register Dosen.html" />
+        <option value="$PROJECT_DIR$/users/views.py" />
+        <option value="$PROJECT_DIR$/users/templates/users/registerdosen.html" />
+        <option value="$PROJECT_DIR$/dosenpapi/templates/dosenpapi/D - dashboard_reviewer.html" />
+        <option value="$PROJECT_DIR$/dosenpapi/templates/dosenpapi/D - list_pkm_rev_reviewer.html" />
+        <option value="$PROJECT_DIR$/dosenpapi/templates/dosenpapi/list_pkm_dosen.html" />
+        <option value="$PROJECT_DIR$/dosenpapi/templates/dosenpapi/dashboard_dosen.html" />
+        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/akumulasi_pkm.html" />
+        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/D - dashboard_pengurus.html" />
+        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/D - list_pkm_pengurus.html" />
+        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/list_pkm_pengurus.html" />
+        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/D - manage_dosen.html" />
+        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/D - manage_dosen_next.html" />
         <option value="$PROJECT_DIR$/bempapi/templates/bempapi/dashboard_pengurus.html" />
         <option value="$PROJECT_DIR$/bempapi/views.py" />
+        <option value="$PROJECT_DIR$/bempapi/urls.py" />
+        <option value="$PROJECT_DIR$/papi/templates/papi/base.html" />
+        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/list_format_pengurus.html" />
+        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/manage_dosen_next.html" />
+        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/manage_dosen.html" />
+        <option value="$PROJECT_DIR$/papi/views.py" />
+        <option value="$PROJECT_DIR$/bempapi/forms.py" />
+        <option value="$PROJECT_DIR$/bempapi/templates/bempapi/timeline_pkm.html" />
       </list>
     </option>
   </component>
@@ -272,6 +506,29 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="bempapi" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WebPapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebPapi" type="462c0819:PsiDirectoryNode" />
+              <item name="papi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebPapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebPapi" type="462c0819:PsiDirectoryNode" />
+              <item name="papi" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebPapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebPapi" type="462c0819:PsiDirectoryNode" />
+              <item name="papi" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="papi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebPapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebPapi" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -282,8 +539,13 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../venv" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program\Python\WebPapi\dosenpapi\templates\dosenpapi" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -353,7 +615,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20201342" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2543624" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -384,155 +646,365 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bempapi/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/templates/users/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bempapi/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="61" lean-forward="true" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/forms.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/papi/templates/papi/Dashboard_mhs.html" />
-    <entry file="file://$PROJECT_DIR$/papi/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/papi/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/papi/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+        <state relative-caret-position="840">
+          <caret line="43" column="81" selection-start-line="43" selection-start-column="81" selection-end-line="43" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/views.py">
+    <entry file="file://$PROJECT_DIR$/dosenpapi/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/papi/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/templates/users/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/dashboard_pengurus.html" />
-    <entry file="file://$PROJECT_DIR$/papi/templates/papi/input_anggota.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="-42">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#62#0" expanded="true" />
+            <marker date="1557411910877" expanded="true" signature="677:682" ph="..." />
+            <marker date="1557411910877" expanded="true" signature="1531:1536" ph="..." />
+            <marker date="1557411910877" expanded="true" signature="2022:2027" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bempapi/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/timeline_pkm.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/papi/templates/papi/proposal_page.html">
+    <entry file="file://$PROJECT_DIR$/dosenpapi/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/papi/templates/papi/upload_page.html">
+    <entry file="file://$PROJECT_DIR$/papi/templates/papi/index_old.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="126">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/papi/templates/papi/base.html">
+    <entry file="file://$PROJECT_DIR$/papi/templates/papi/list_format.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        <state relative-caret-position="362">
+          <caret line="131" column="73" lean-forward="true" selection-start-line="130" selection-end-line="131" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papi/templates/papi/file_log.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="46" column="42" lean-forward="true" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papi/templates/papi/info_dosen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="20" selection-start-line="20" selection-end-line="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/papi/templates/papi/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+        <state relative-caret-position="525">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papi/templates/papi/input_anggota.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="90" selection-start-line="18" selection-start-column="90" selection-end-line="18" selection-end-column="90" />
+          <folding>
+            <element signature="n#style#0;n#footer#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#footer#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papi/templates/papi/dashboard_mhs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="85" selection-start-line="85" selection-end-line="86" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papi/templates/papi/input_dospem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papi/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="15" column="79" selection-start-line="15" selection-start-column="79" selection-end-line="15" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/D - Login.html" />
+    <entry file="file://$PROJECT_DIR$/papi/templates/papi/timeline.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/D - Register.html" />
+    <entry file="file://$PROJECT_DIR$/Desain For BootstrapStudio/D - Register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="49" column="16" lean-forward="true" selection-start-line="49" selection-start-column="16" selection-end-line="62" selection-end-column="228" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/register_old.html" />
+    <entry file="file://$PROJECT_DIR$/users/templates/users/D - Register Dosen.html" />
+    <entry file="file://$PROJECT_DIR$/dosenpapi/templates/dosenpapi/D - dashboard_reviewer.html" />
+    <entry file="file://$PROJECT_DIR$/users/templates/users/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/profil.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="83" selection-start-line="20" selection-start-column="83" selection-end-line="20" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/registerdosen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1113">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/registerdosen_old.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dosenpapi/templates/dosenpapi/D - list_pkm_rev_reviewer.html" />
+    <entry file="file://$PROJECT_DIR$/dosenpapi/templates/dosenpapi/list_pkm_dosen_old.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2071">
+          <caret line="144" column="11" lean-forward="true" selection-start-line="144" selection-start-column="11" selection-end-line="144" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dosenpapi/templates/dosenpapi/list_pkm_dosen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dosenpapi/templates/dosenpapi/dashboard_dosen_old.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="55" selection-start-line="55" selection-end-line="56" selection-end-column="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dosenpapi/templates/dosenpapi/dashboard_dosen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/D - dashboard_pengurus.html" />
+    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/dashboard_pengurus_old.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="123" selection-start-line="123" selection-end-line="125" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/D - list_pkm_pengurus.html" />
+    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/D - manage_dosen.html" />
+    <entry file="file://$PROJECT_DIR$/Desain For BootstrapStudio/D - manage_dosen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="92" selection-start-line="92" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/D - manage_dosen_next.html" />
+    <entry file="file://$PROJECT_DIR$/users/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/akumulasi_pkm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        <state relative-caret-position="168">
+          <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/manage_pkm.html">
+    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/manage_dosen_old.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/dashboard_pengurus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="65" column="159" selection-start-line="65" selection-start-column="159" selection-end-line="65" selection-end-column="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bempapi/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papi/templates/papi/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="108" selection-start-line="108" selection-end-line="109" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bempapi/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="76" column="60" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
+          <folding>
+            <marker date="1558118762634" expanded="true" signature="2153:2222" ph="..." />
+            <marker date="1558118762634" expanded="true" signature="2992:2997" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papi/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-876">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/manage_dosen_next.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/manage_dosen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="54" column="59" lean-forward="true" selection-start-line="54" selection-start-column="59" selection-end-line="54" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/list_pkm_pengurus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/list_format_pengurus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="118" column="24" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/papi/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bempapi/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+            <marker date="1558121056131" expanded="true" signature="224:229" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bempapi/templates/bempapi/timeline_pkm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
         </state>
       </provider>
     </entry>

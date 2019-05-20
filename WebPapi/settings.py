@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'papi.apps.PapiConfig',
     'users.apps.UsersConfig',
     'bempapi.apps.BempapiConfig',
+    'dosenpapi.apps.DosenpapiConfig',
 ]
 
 MIDDLEWARE = [

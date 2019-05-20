@@ -1,81 +1,60 @@
+{% extends 'papi/base.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>WebPapi</title>
-    <link rel="stylesheet" href="{% static 'papi/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'papi/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/Login-Form-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/Registration-Form-with-Photo.css' %}">
     <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
+    <link rel="icon" href="{% static 'papi/img/Logo.png' %}">
 </head>
-
 <body>
-    <div class="container-fluid text-center d-table" style="background-position: center;background-size: cover;background-repeat: no-repeat;background-image: url(&quot;{% static 'papi/img/Header.png' %}&quot;);height: 400px;">
-        <div class="row text-center justify-content-center align-items-center align-content-center mx-auto" style="margin-top: 20px;">
-            {% if user.is_authenticated %}
-                <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'login' %}">Dashboard</a></div>
-            {% endif %}
-            <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'index' %}">Informasi PKM</a></div>
-            <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'login' %}">Informasi Dosen</a></div>
-            <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'login' %}">Timeline</a></div>
-            <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'login' %}">Format</a></div>
-            {% if user.is_authenticated %}
-            <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'login' %}">Download</a></div>
-                <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'login' %}">Profile</a></div>
-            {% else %}
-            <div class="col text-center"><a class="btn btn-custom btn-lg" type="button" style="width: 200px; text-decoration: none;" role="button" href="{% url 'login' %}">Login</a></div>
-            {% endif %}
-        </div>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-auto text-right align-self-center"><img src="{% static 'papi/img/Logo.png' %}" width="100" height="100"></div>
-            <div class="col-auto text-left" style="font-size: 96px;font-weight: bold;font-style: normal;color: rgb(252,253,255);">
-                <p>WebPapi</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <p class="text-center" style="font-size: 36px;color: rgb(252,253,255);">Padjadjaran Goes To Pimnas</p>
-            </div>
-        </div>
+{% block content %}
+    <div class="container-fluid text-center" style="background-image: url({% static 'papi/img/Head.jpg' %});background-position: top;background-size: auto;">
+        <div style="min-height: 330px;"></div>
     </div>
     {% if messages %}
         {% for message in messages %}
             <div class="alert alert-{{message.tags}}">{{message}}</div>
-        {% endfor %}    
+        {% endfor %}
     {% endif %}
-    <div class="container text-center">
-        <p class="text-center flex-shrink-1 justify-content-center align-content-center my-auto" style="font-size: 36px;color: #70c7e2;font-weight: bold;"><br>Everything you need to know about PKM<br><br></p>
-        <p class="text-center" style="font-size: 36px;color: #70c7e2;font-weight: bold;">All In One Place</p>
-        <div class="row" style="margin-top: 30px;">
-            <div class="col">
-                <p class="text-left" style="color: #ffa883;font-size: 44px;font-weight: bold;">Infromasi PKM</p>
-                <div class="row">
-                    <div class="col">
-                        <p class="text-left" style="font-size: 20px;color: #ffa883;"><br>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. <br>Ut enim ad minim veniam, quis nostrud <br>exercitation ullamco laboris nisi ut aliquip
-                            <br>ex ea commodo consequat. Duis aute irure.<br><br></p>
+    <div class="login-clean" style="background-color: #FAF1E8;">
+        <div class="container text-center" style="background-color: #FAF1E8">
+            <p class="text-center" style="font-size: 36px;color: #70c7e2;font-weight: bold;"><br>Everything you need to know about PKM<br>All In One Place</p>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col">
+                    <p class="text-left" style="color: #ffa883;font-size: 44px;font-weight: bold;">Informasi PKM</p>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-left" style="font-size: 20px;color: #ffa883;">Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. <br>Ut enim ad minim veniam, quis nostrud <br>exercitation ullamco laboris nisi ut aliquip
+                                <br>ex ea commodo consequat. Duis aute irure.<br><br></p>
+                        </div>
                     </div>
                 </div>
+                <div class="col"><img src="{% static 'papi/img/Logo.png' %}" style="width: 400px;"></div>
             </div>
-            <div class="col"><img src="{% static 'papi/img/Logo.png' %}" style="width: 400px;"></div>
-        </div>
-        <div class="row" style="margin-top: 30px;">
-            <div class="col"><img src="{% static 'papi/img/Logo.png' %}" style="width: 400px;"></div>
-            <div class="col">
-                <p class="text-left" style="color: #ffa883;font-size: 44px;font-weight: bold;">Informasi Dosen</p>
-                <div class="row">
-                    <div class="col">
-                        <p class="text-left" style="font-size: 20px;color: #ffa883;"><br>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. <br>Ut enim ad minim veniam, quis nostrud <br>exercitation ullamco laboris nisi ut aliquip
-                            <br>ex ea commodo consequat. Duis aute irure.<br><br></p>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col"><img src="{% static 'papi/img/Logo.png' %}" style="width: 400px;"></div>
+                <div class="col">
+                    <p class="text-left" style="color: #ffa883;font-size: 44px;font-weight: bold;">Informasi Dosen</p>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-left" style="font-size: 20px;color: #ffa883;">Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. <br>Ut enim ad minim veniam, quis nostrud <br>exercitation ullamco laboris nisi ut aliquip
+                                <br>ex ea commodo consequat. Duis aute irure.<br><br></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container" style="background-position: top;background-size: cover;background-repeat: no-repeat;background-image: url(&quot;{% static 'papi/img/FooterRevisi.png' %}&quot;);height: 300px;width: 1140px;min-width: 1920px;"></div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
+{% endblock %}
 
+<script src="{% static 'papi/js/jquery.min.js' %}"></script>
+<script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
 </html>

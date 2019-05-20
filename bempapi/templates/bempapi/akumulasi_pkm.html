@@ -22,13 +22,11 @@
         {% endfor %}
         
     {% endfor %}
-
     {% for proposal in pkm %}
         <p>{{proposal.judul}}</p>
         <p>{{proposal.idStatus.namaStatus}}</p>
         <p>{{proposal.idUsers.mahasiswa.fakultas.namaFakultas}}</p>
         <br>
     {% endfor %}
-    
 </body>
 </html>

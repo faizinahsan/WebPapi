@@ -1,0 +1,45 @@
+{% extends 'papi/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>WebPapi</title>
+    <link rel="stylesheet" href="{% static 'papi/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/fonts/ionicons.min.css'%}">
+    <link rel="stylesheet" href="{% static 'papi/css/Login-Form-Clean.css' %}">
+</head>
+<body>
+    {% block content %}
+    <div class="container-fluid text-center" style="background-image: url({% static 'papi/img/Head.jpg' %});background-position: top;background-size: auto;">
+        <div style="min-height: 330px;"></div>
+    </div>
+    <div class="login-clean" style="background-color: #FAF1E8;">
+        <div class="container" style="min-width: 80%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 7%">
+            <div class="form-row">
+                <div class="col">
+                    <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Profile Mahasiswa<br></p>
+                                <div class="illustration">
+                    <div><img src="{% static 'papi/img/Logo.png' %}" class="center" style="width:300px;height:300px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="text-center" style="color: #FFA883;font-size: 30px;font-weight: bold;">Nama Mahasiswa<br></p>
+                    <p class="text-center" style="color: #FFA883;font-size: 30px;font-weight: bold;">NPM Mahasiswa<br></p>
+            <div class="row">
+                <div class="col">
+                    <p class="text" style="color: #FFA883;font-size: 20px;margin-right: 10%;margin-left: 10%"><br>About Me:<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent laoreet commodo augue, quis vestibulum lectus rhoncus vel. Aliquam blandit augue vitae arcu volutpat maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam id felis eget sem porttitor consectetur nec ac turpis. Phasellus ut mauris est. Quisque a gravida ipsum. Quisque tempus lorem quis nisi posuere suscipit. Ut eget est eu metus elementum rutrum eget quis tellus. Duis a purus leo. Suspendisse ullamcorper bibendum tellus, mollis fermentum diam rutrum id. Nullam ut tortor sit amet urna elementum tristique eget ac lacus. Integer vel erat magna. Sed vitae odio porttitor, volutpat arcu non, malesuada est. Fusce dictum tellus in posuere venenatis. Maecenas malesuada velit at est elementum maximus. Etiam placerat augue ac ex vulputate vehicula.<br><br>In felis nisl, sodales ut molestie nec, porttitor quis libero. In interdum ultrices faucibus. Sed vitae felis dictum, porttitor ante consectetur, luctus sem. Sed facilisis dapibus est a elementum. Mauris eleifend nibh ac cursus lacinia. Morbi risus massa, fringilla placerat tortor sit amet, rhoncus sagittis ipsum. Cras venenatis arcu quis augue accumsan imperdiet. Etiam faucibus, diam eget sollicitudin venenatis, velit lorem aliquam metus, nec scelerisque ex odio sit amet sem.<br></p></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    {% endblock %}
+
+</body>
+</html>

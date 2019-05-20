@@ -1,0 +1,52 @@
+{% extends 'papi/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>WebPapi</title>
+    <link rel="stylesheet" href="{% static 'papi/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/Login-Form-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/Registration-Form-with-Photo.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
+    <link rel="icon" href="{% static 'papi/img/Logo.png' %}">
+</head>
+<body>
+
+{% block content %}
+    <div class="register-photo" style="background-color: #FAF1E8;">
+        <div class="login-clean" style="background-color: #FAF1E8;">
+            <div class="form-container" style="background-color: #FDE3C8;">
+                <form class="border rounded" action="{% url 'manage-dosen' idPkm=pkm.pk %}" method="POST" style="min-width: 60%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px;margin-top: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 18%">
+                    {% csrf_token %}
+                    <div class="illustration">
+                        <div><img src="{% static 'papi/img/Login.jpg' %}" class="center"></div>
+                    </div>
+                    <div class="form-group"><input class="form-control" type="text" disabled value="ID Proposal = {{ pkm.pk }}" name="nama" placeholder="ID PKM" style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="text" disabled value="{{ pkm.idKategori.namaKategori }}" name="npm" placeholder="Kategori PKM" max="13" style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="text" disabled value="{{ pkm.idBidang.namaBidang }}" name="npm" placeholder="Bidang PKM" max="13" style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="text" disabled value="{{ pkm.judul }}" name="npm" placeholder="Judul PKM" max="13" style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><label class="text-center" style="font-weight: normal;">Dosen Reviewer</label>
+                        <select class="form-control" name="idDosenReviewer" style="background-color: #f0f9fc;">
+                            <optgroup label="Dosen">
+                                {% for dosen in dosens %}
+                                    <option value="{{ dosen.pk }}">{{ dosen.user.username }}</option>
+                                {% endfor %}
+
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: #FFA883;color: #FAF2E8;">Done</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+<script src="{% static 'papi/js/jquery.min.js' %}"></script>
+<script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

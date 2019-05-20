@@ -4,44 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <title>WebPapi</title>
+    <link rel="stylesheet" href="{% static 'papi/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'papi/fonts/ionicons.min.css' %}">
-    <link rel="stylesheet" href="{%  static 'papi/css/Login-Form-Clean.css'%}">
+    <link rel="stylesheet" href="{% static 'papi/css/Login-Form-Clean.css' %}">
     <link rel="stylesheet" href="{% static 'papi/css/Registration-Form-with-Photo.css' %}">
-    <link rel="stylesheet" href="{% static 'papi/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'papi/css/main.css' %}">
     <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
+    <link rel="icon" href="{% static 'papi/img/Logo.png' %}">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg  navbar-dark bg-dark navbar-fixed-top">
-  <a  class="navbar-brand" href="home.html" >WebPapi</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark navbar-fixed-top" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 8px 0 rgba(0, 0, 0, 0.15);">
+    <a  class="navbar-brand" href="{% url 'index' %}" >WebPapi</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            {% if user.is_authenticated %}
+                {% if user.is_student %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'dashboard-mhs' %}">Dashboard</a>
+                    </li>
+                {% elif user.is_teacher%}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'dashboard-dosen' %}">Dashboard</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'akumulasi-pkm' %}">Dashboard</a>
+                    </li>
+                {% endif %}
+            {% endif %}
+            {% if user.is_authenticated %}
+                {% if user.is_teacher and user.is_teacher %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'info-dosen' %}">Info dosen</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'manage-pkm' %}">Info dosen</a>
+                    </li>
+                {% endif %}
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'manage-pkm' %}">Info dosen</a>
+                </li>
+            {% endif %}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Info PKM</a>
+            </li>
+            {% if user.is_authenticated %}
+                {% if user.is_student %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'timeline-mahasiswa' %}">Timeline</a>
+                    </li>
+                {% elif user.is_teacher %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'timeline-mahasiswa' %}">Timeline</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'timeline-pkm' %}">Timeline</a>
+                    </li>
+                {% endif %}
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'timeline-mahasiswa' %}">Timeline</a>
+                </li>
+            {% endif %}
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Info dosen</a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="#">Info PKM</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Timeline</a>
-      </li>
-      </ul>
-   </div>
+            {% if user.is_authenticated %}
+                {% if user.is_student and user.is_teacher %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'list-format' %}">Download Format</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'upload-format-pkm' %}">Upload Format</a>
+                    </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile-mahasiswa' %}">Profile</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'list-format' %}">Download Format</a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+    {% if user.is_authenticated %}
+        <a class="btn btn-outline-light my-2 my-sm-0" role="button" href="{% url 'logout' %}" style="color: #70C7E2">Logout</a>
+    {% else %}
+        <a class="btn btn-outline-light my-2 my-sm-0" role="button" href="{% url 'login' %}" style="color: #70C7E2">Login</a>
+    {% endif %}
 </nav>
 {% block content %}
 
 {% endblock %}
-
-     <div class="container-fluid text-center d-inline-block" style="background-image: url({% static 'papi/img/FooterRevisi.png' %});background-position: top;background-size: auto;">
-        <div style="min-height: 100px;"></div>
-        <p style="font-size: 12px;font-weight: bold;color: #ffffff;">@ 2019 Cyber Developer</p>
-    </div>
+<footer class="page-footer font-small" style="background-color: #2E2E2E">
+    <div class="footer-copyright text-center py-3" style="color: white">© 2019 Cyber</div>
+</footer>
+<script src="{% static 'papi/js/jquery.min.js' %}"></script>
+<script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
 </html>

@@ -1,53 +1,25 @@
+{% extends 'papi/base.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>WebPapi</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="{% static 'papi/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'papi/fonts/ionicons.min.css' %}">
-    <link rel="stylesheet" href="{%  static 'papi/css/Login-Form-Clean.css'%}">
+    <link rel="stylesheet" href="{% static 'papi/css/Login-Form-Clean.css' %}">
     <link rel="stylesheet" href="{% static 'papi/css/Registration-Form-with-Photo.css' %}">
-    <link rel="stylesheet" href="{% static 'papi/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'papi/css/main.css' %}">
     <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
+    <link rel="icon" href="{% static 'papi/img/Logo.png' %}">
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark navbar-fixed-top" >
-  <a class="navbar-brand" href="home.html">WebPapi</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Info dosen</a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="#">Info PKM</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Timeline</a>
-      </li>
-      </ul>
-   </div>
-</nav>
-<div class="container-fluid text-center " style="background-image: url({% static 'papi/img/Head.jpg' %});background-position: top;background-size: auto;">
-        <div style="min-height: 280px;"></div>
-
+{% block content %}
+    <div class="container-fluid text-center" style="background-image: url({% static 'papi/img/Head.jpg' %});background-position: top;background-size: auto;">
+        <div style="min-height: 330px;"></div>
     </div>
     <div class="login-clean" style="background-color: #FAF1E8;">
-        <form class="border rounded" method="post" style="min-width: 1400px;background-color: #fde3c8;">
-            <form class="border rounded" method="post" style="min-width: 1400px;background-color: #fde3c8;">
-            <h2 class="sr-only">Login Form</h2>
-            <div class="illustration"></div>
+        <div class="container" style="min-width: 80%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 7%">
             <div class="form-row">
                 <div class="col">
                     <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">TOP 5 Fakultas<br></p>
@@ -55,89 +27,69 @@
             </div>
             <div class="container">
                 <div class="table-responsive">
-  <table class="table" >
-    <thead>
-      <tr>
-        <th scope="col">Peringkat</th>
-        <th scope="col">Fakultas</th>
-        <th scope="col">Belum direvisi</th>
-        <th scope="col">Sudah direvisi</th>
-        <th scope="col">Selesai</th>
-        <th scope="col">Total</th>
-      </tr>
-    </thead>
-    <tbody>
-{#        {% for namaFakultas,hasil in fakultas.items %}#}
-{#        <p>{{ namaFakultas }}: </p>#}
-{#        {% for key,value in hasil.items %}#}
-{#            <p>{{ key }}: {{value}}</p>#}
-{#        {% endfor %}#}
-
-{#    {% endfor %}#}
-
-    {% for fakult in fakultas %}
-            <tr>
-                <th scope="row">{{ forloop.counter }}</th>
-        {% for key,value in fakult.items %}
-                <td>{{ value }}</td>
-        {% endfor %}
-            </tr>
-    {% endfor %}
-
-
-    </tbody>
-{#           <tr>#}
-{#        <th scope="row">1</th>#}
-{#        <td>FMIPA</td>#}
-{#        <td>11</td>#}
-{#        <td>11</td>#}
-{#        <td>11</td>#}
-{#        </tr>#}
-{#      <tr>#}
-{#        <th scope="row">2</th>#}
-{#        <td>Cell</td>#}
-{#        <td>Cell</td>#}
-{#        <td>Cell</td>#}
-{#        <td>Cell</td>#}
-{#      </tr>#}
-{#      <tr>#}
-{#        <th scope="row">3</th>#}
-{#        <td>Cell</td>#}
-{#        <td>Cell</td>#}
-{#        <td>Cell</td>#}
-{#        <td>Cell</td>#}
-{#      </tr>#}
-  </table>
-</div>
+                    <table class="table" >
+                        <thead>
+                        <tr>
+                            <th scope="col">Peringkat</th>
+                            <th scope="col">Fakultas</th>
+                            <th scope="col">Belum direvisi</th>
+                            <th scope="col">Sudah direvisi</th>
+                            <th scope="col">Selesai</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for fakult in fakultas %}
+                            <tr>
+                                <th scope="row">{{ forloop.counter }}</th>
+                                {% for key,value in fakult.items %}
+                                    <td>{{ value }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </form>
-        <table class="table text-center" >
-    <thead>
-      <tr>
-        <th scope="col">Belum direvisi</th>
-        <th scope="col">Sudah direvisi</th>
-        <th scope="col">Selesai</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td scope="row"><p style="font-size: 144px;font-weight: bold;color: #FFA883; ">{{ notrevisied.count }}</p></td>
-        <td><p style="font-size: 144px;font-weight: bold;color: #FFA883;">{{ onprogress.count }}</p></td>
-        <td><p style="font-size: 144px;font-weight: bold;color: #FFA883;">{{ revisied.count }}</p></td>
-      </tr>
-      <tr>
-    </tbody>
-  </table>
-
-        </form>
+            <table class="table text-center" >
+                <thead>
+                <tr>
+                    <th scope="col">Belum direvisi</th>
+                    <th scope="col">Sedang direvisi</th>
+                    <th scope="col">Selesai</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td scope="row"><a href="{% url 'list-pkm-withId' idStatus=1 %}"><p style="font-size: 144px;font-weight: bold;color: #FFA883; ">{{ notrevisied.count }}</p></a></td>
+                    <td><a href="{% url 'list-pkm-withId' idStatus=2 %}"><p style="font-size: 144px;font-weight: bold;color: #FFA883;">{{ onprogress.count }}</p></a></td>
+                    <td><a href="{% url 'list-pkm-withId' idStatus=3 %}"><p style="font-size: 144px;font-weight: bold;color: #FFA883;">{{ revisied.count }}</p></a></td>
+                </tr>
+                <tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="container-fluid text-center d-inline-block" style="background-image: url({% static 'papi/img/FooterRevisi.png' %});background-position: top;background-size: auto;">
-        <div style="min-height: 100px;"></div>
-        <p style="font-size: 12px;font-weight: bold;color: #ffffff;">@ 2019 Cyber Developer</p>
-    </div>
-    <script src="{% static 'papi/js/jquery.min.js' %}"></script>
-    <script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
+{% endblock %}
+<script src="{% static 'papi/js/jquery.min.js' %}"></script>
+<script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
+<script>
+    let unrevisedChart = document.getElementById(unrevisedChart).getContext('2d');
+    let massPopChart = new Chart(unrevisedChart, {
+        type:'bar',
+        data:{
+            labels:['Belum direvisi', 'Sudah direvisi', 'Selesai'],
+            datasets:[{
+                label:'jumlah',
+                data:[
+                    12,
+                    2,
+                    3]
+            }]
 
+        },
+        options:{}
+    })
+</script>
 </body>
-
 </html>

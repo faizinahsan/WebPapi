@@ -1,0 +1,68 @@
+{% extends 'papi/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>WebPapi</title>
+    <link rel="stylesheet" href="{% static 'papi/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/Login-Form-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/Registration-Form-with-Photo.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
+    <link rel="icon" href="{% static 'papi/img/Logo.png' %}">
+</head>
+<body>
+{% block content %}
+    <div class="container-fluid text-center" style="background-image: url({% static 'papi/img/Head.jpg' %});background-position: top;background-size: auto;">
+        <div style="min-height: 330px;"></div>
+    </div>
+    <div class="login-clean" style="background-color: #FAF1E8;">
+        <div class="container" style="min-width: 80%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 7%">
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"></div>
+            <div class="form-row">
+                <div class="col">
+                    <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">List Proposal PKM<br></p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Tanggal Upload</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Kategori</th>
+                            <th scope="col">Bidang</th>
+                            <th scope="col">Judul PKM</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for pkm in pkms %}
+                            <tr>
+                                <th scope="row">{{ forloop.counter }}</th>
+                                <td>14/02/2019</td>
+                                <td>{{ pkm.idUsers.mahasiswa.npm }}</td>
+                                <td>{{ pkm.idBidang.namaBidang }}</td>
+                                <td>{{ pkm.idKategori.namaKategori }}</td>
+                                <td>{{ pkm.judul }}</td>
+                                <td><button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Download</button></td>
+                                <td><button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Upload Revisi</button></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+<script src="{% static 'papi/js/jquery.min.js' %}"></script>
+<script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

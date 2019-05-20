@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import RegistrationForm,MahasiswaRegisForm,DosenRegisForm
 from django.contrib import messages
 from .models import Fakultas,Jurusan
+from papi.models import KategoriPKM
 from django.contrib.auth import get_user_model
 User = get_user_model()
 # Create your views here.
@@ -45,6 +46,8 @@ def register(request):
     }
     return render(request,'users/register.html',context)
 def register_dosen(request):
+    fakultas = Fakultas.objects.all()
+    bidang = KategoriPKM.objects.all()
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         m_form = DosenRegisForm(request.POST)
@@ -63,4 +66,12 @@ def register_dosen(request):
     else:
         form = RegistrationForm()
         m_form = DosenRegisForm()
-    return render(request,'users/registerdosen.html',{'form':form,'m_form':m_form})
+    context = {
+        'form':form,
+        'm_form':m_form,
+        'fakultass':fakultas,
+        'bidangs':bidang,
+    }
+    return render(request,'users/registerdosen.html',context)
+def profie_mahasiswa(request):
+    return render(request,'users/profil.html')

@@ -22,12 +22,14 @@ from users import views as users_views
 urlpatterns = [
     path('', include('papi.urls')),
     path('bem/', include('bempapi.urls')),
+    path('dosen/', include('dosenpapi.urls')),
     path('admin/', admin.site.urls),
     # Perlu diubah untuk Login sesuai projek lost found
     path('login/',auth_views.LoginView.as_view(template_name='users/login.html') ,name='login'),
     path('logout/',auth_views.LogoutView.as_view(template_name='papi/index.html') ,name='logout'),
     path('register/',users_views.register,name='register'),
-    path('register-dosen/',users_views.register_dosen,name='register-dosen')
+    path('register-dosen/',users_views.register_dosen,name='register-dosen'),
+    path('profile-mahasiswa/', users_views.profie_mahasiswa, name='profile-mahasiswa')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

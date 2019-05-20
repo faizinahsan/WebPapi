@@ -4,7 +4,7 @@ from .models import ProposalPKM,Anggota,CobaMultipleInput
 class UploadPKMForm(forms.ModelForm):
     class Meta:
         model = ProposalPKM
-        fields = ('judul','namaKetua','deskripsi','document','idFakultas','idBidang','idKategori','idStatus')
+        fields = ('judul','namaKetua','deskripsi','document','idFakultas','idBidang','idKategori','idStatus','idDosenReviewer')
 class AnggotaPKMForm(forms.ModelForm):
     class Meta:
         model = Anggota

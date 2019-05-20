@@ -1,120 +1,89 @@
+{% extends 'papi/base.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>WebPapi</title>
-
+    <link rel="stylesheet" href="{% static 'papi/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'papi/fonts/ionicons.min.css' %}">
-    <link rel="stylesheet" href="{%  static 'papi/css/Login-Form-Clean.css'%}">
+    <link rel="stylesheet" href="{% static 'papi/css/Login-Form-Clean.css' %}">
     <link rel="stylesheet" href="{% static 'papi/css/Registration-Form-with-Photo.css' %}">
-    <link rel="stylesheet" href="{% static 'papi/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'papi/css/main.css' %}">
     <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
+    <link rel="icon" href="{% static 'papi/img/Logo.png' %}">
 </head>
-
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">WebPapi</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Info dosen</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Info PKM</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Timeline</a>
-            </li>
-        </ul>
+{% block content %}
+    <div class="container-fluid text-center" style="background-image: url({% static 'papi/img/Head.jpg' %});background-position: top;background-size: auto;">
+        <div style="min-height: 330px;"></div>
     </div>
-</nav>
-</div>
-</div>
-<!--<div class="container-fluid text-center d-inline-block" style="background-image: url(&quot;assets/img/Header.png&quot;);background-position: 100% 50%;background-size: contain;background-repeat: round;min-height: 110px;margin-top: 0px;padding: 0px;">
-    <div class="row text-center justify-content-center align-items-center align-content-center mx-auto" style="margin-top: 20px;background-position: center;background-size: contain;background-repeat: repeat;">
-        <div class="col text-center"><button class="btn btn-primary btn-lg text-center border rounded-0" type="button" style="width: 200px;">Infromasi PKM</button></div>
-        <div class="col text-center"><button class="btn btn-primary btn-lg" type="button" style="width: 200px;">Informasi Dosen</button></div>
-        <div class="col text-center"><button class="btn btn-primary btn-lg" type="button" style="width: 200px;">Timeline</button></div>
-        <div class="col text-center"><button class="btn btn-primary btn-lg" type="button" style="width: 200px;">Format</button></div>
-        <div class="col text-center"><button class="btn btn-primary btn-lg" type="button" style="width: 200px;">Login</button></div>
-    </div>
-</div> -->
-<div class="login-clean" style="background-color: #FAF1E8;">
-    <form class="border rounded" method="POST" enctype="multipart/form-data" action="{% url 'upload-page' %}" style="min-width: 900px;background-color: #FDE3C8;">
-        {% csrf_token %}
-        <h2 class="sr-only">Login Form</h2>
-        <div class="illustration"></div>
-        <div class="form-row">
-            <div class="col">
-                <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Kamu punya proposal PKM yang ingin diajukan?<br></p>
+    <div class="login-clean" style="background-color: #FAF1E8;">
+        <div class="container" class="border rounded" method="post" style="min-width: 80%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 10%">
+            <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Kamu punya proposal PKM yang ingin diajukan?<br></p>
+            <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Ayo Upload Sekarang!<br></p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 p-3">
+                    <div class="card h-100">
+                        <img class="card-img-top img-fluid" src="{% static 'papi/img/uploadfile.png' %}" alt="img" style="width: 90px;display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;" >
+                        <div class="card-body">
+                            <h4 class="card-title" style="text-align: center;">Proposal PKM</h4>
+                            <a href="#" class="btn btn-xs btn-success" style="width: 90px;display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;"><span class="glyphicon glyphicon-ok"></span> Uploaded</a>
+                            <p class="card-text">Pastikan format proposal yang akan kamu kirim sudah sesuai dengan pedoman terbaru.</p>
+                        </div>
+                        <div class="card-footer text-center bg-white">
+                            <a class="btn btn-outline-secondary" href="{% url 'upload-page' %}">Upload</a>
+                            <a class="btn btn-outline-secondary" href="#">Perbaharui</a>
+                            <a class="btn btn-outline-secondary" href="{% url 'log-file' %}"> Tracker</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 p-3">
+                    <div class="card h-100">
+                        <img class="card-img-top img-fluid" src="{% static 'papi/img/uploadanggota.png' %}" alt="img" style="width: 90px;display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;" >
+                        <div class="card-body">
+                            <h4 class="card-title" style="text-align: center;">Data Anggota</h4>
+                            <p class="card-text">Input data anggota untuk mendapatkan notifikasi email. Tidak perlu menginput ulang data ketua tim</p>
+                        </div>
+                        <div class="card-footer text-center bg-white">
+                            <a class="btn btn-outline-secondary" href="{% url 'input-anggota' idPkm=1 %}">Tambah</a>
+                            <a class="btn btn-outline-secondary" href="#">Ubah</a>
+                            <a class="btn btn-outline-secondary" href="#">Lihat</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 p-3">
+                    <div class="card h-100">
+                        <img class="card-img-top img-fluid" src="{% static 'papi/img/uploaddosen.png' %}" alt="img" style="width: 90px;display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;" >
+                        <div class="card-body">
+                            <h4 class="card-title" style="text-align: center;">Data Dosen Pembimbing</h4>
+                            <p class="card-text">Input data dosen pembimbing untuk mendapatkan notifikasi email. Input email dosen pembimbing yang paling sering digunakan.</p>
+                        </div>
+                        <div class="card-footer text-center bg-white">
+                            <a class="btn btn-outline-secondary" href="{% url 'input-dospem' %}">Tambah</a>
+                            <a class="btn btn-outline-secondary" href="#">Ubah</a>
+                            <a class="btn btn-outline-secondary" href="#">Lihat</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="form-row">
-            <div class="col">
-                <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Ayo Upload Sekarang!<br></p>
-            </div>
-        </div>
-        <div class="form-group"><input class="form-control" type="text" name="judul" placeholder="Judul PKM" style="background-color: #e5e5e5;"></div>
-        <div class="form-group"><input class="form-control" type="text" name="namaKetua" placeholder="Nama Ketua" style="background-color: #e5e5e5;"></div>
-        <div class="form-group"><input class="form-control" type="text" name="deskripsi" placeholder="Deskripsi" style="background-color: #e5e5e5;"></div>
-        <label>File PKM (.docx)</label>
-        <input class="form-control" type="file" name="document" placeholder="uploadPKM" style="background-color: #e5e5e5;">
-
-        <select class="custom-select my-1 mr-sm-2" name="idFakultas" id="inlineFormMhsSelectBidang" style="background-color: #e5e5e5";>
-            <option selected>Fakultas</option>
-            {% for fakulta in fakultas %}
-                <option value="{{ fakulta.pk }}">{{ fakulta.namaFakultas }}</option>
-            {% endfor %}
-            
-        </select>
-        <select class="custom-select my-1 mr-sm-2" name="idBidang" id="inlineFormMhsSelectBidang" style="background-color: #e5e5e5";>
-            <option selected>Bidang PKM</option>
-            {% for bid in bidang %}
-                <option value="{{ bid.pk }}">{{ bid.namaBidang }}</option>
-            {% endfor %}
-        </select>
-        <select class="custom-select my-1 mr-sm-2" name="idKategori" id="inlineFormMhsSelectKategori" style="background-color: #e5e5e5";>
-            <option selected>Kategori PKM</option>
-            {% for kat in kategori %}
-                <option value="{{ kat.pk }}">{{ kat.namaKategori }}</option>
-            {% endfor %}
-
-        </select>
-        <input type="hidden" id="idStatus" name="idStatus" value="1">
-        <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: #ffa883;">Upload Proposal PKM</button></div>
-    {% if u_form.errors %}
-    <p>{{ u_form.errors }}</p>
-    {% endif %}
-    </form>
-
-    <div class="form-row justify-content-center">
-        <div class="col-4 col-xl-12 text-center">
-            <p class="text-center" style="font-size: 20px;"><br>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. <br>Ut enim ad minim veniam, quis nostrud <br>exercitation ullamco laboris nisi ut aliquip <br>ex
-                ea commodo consequat. Duis aute irure.<br><br></p>
-        </div>
     </div>
-</div>
-<div class="container-fluid text-center d-inline-block" style="background-image: url(&quot;assets/img/Head.jpg&quot;);background-position: top;background-size: contain;">
-    <div style="min-height: 200px;"></div>
+{% endblock %}
 
-</div>
-<div class="container-fluid text-center d-inline-block" style="background-image: url(&quot;assets/img/FooterRevisi.png&quot;);background-position: top;background-size: contain;">
-    <div style="min-height: 50px;"></div>
-    <p style="font-size: 30px;font-weight: bold;color: #ffffff;">Cyber Developer</p>
-</div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="{% static 'papi/js/jquery.min.js' %}"></script>
+<script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
-
 </html>

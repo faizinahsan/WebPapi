@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse
 from .forms import UploadPKMForm,AnggotaPKMForm,MultipleInputForm
 from .models import ProposalPKM,Anggota,BidangPKM,KategoriPKM
-from users.models import Fakultas
+from users.models import Fakultas,Dosen
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 User = get_user_model()
@@ -20,7 +20,7 @@ def upload_pkm(request):
             u_form = form.save(commit=False)
             u_form.idUsers = request.user
             u_form.save()
-            return redirect('proposal-pkm',idPkm=u_form.pk)
+            return redirect('dashboard-mhs',idPkm=u_form.pk)
     else:
         form = UploadPKMForm()
     context = {
@@ -29,7 +29,7 @@ def upload_pkm(request):
         'kategori':kategori,
         'fakultas':fakultas,
     }
-    return render(request,'papi/Dashboard_mhs.html',context)
+    return render(request,'papi/uploadDashboard_mhs.html',context)
 @login_required
 def input_anggota(request,idPkm):
     pkm = get_object_or_404(ProposalPKM, pk=idPkm)
@@ -64,3 +64,27 @@ def proposal_pkm_page(request,idPkm):
     anggota = Anggota.objects.filter(idPkm = idPkm)
     total = anggota.count
     return render(request,'papi/proposal_page.html',{'pkm':pkm,'anggota':anggota,'total':total})
+def download_format_pkm(request):
+    return render(request,'papi/download_format.html')
+def info_dosen(request):
+    dosen =Dosen.objects.all()
+    context ={
+        'dosen':dosen,
+    }
+    return render(request,'papi/info_dosen.html',context)
+def log_file(request):
+    p_user = request.user
+    proposal = ProposalPKM.objects.filter(idUsers=p_user).first()
+    context = {
+        'proposal':proposal,
+    }
+    return render(request,'papi/file_log.html',context)
+
+def list_format(request):
+    return render(request,'papi/list_format.html')
+def dashboard_mhs(request):
+    return render(request,'papi/dashboard_mhs.html')
+def input_dospem(request):
+    return render(request,'papi/input_dospem.html')
+def timeline_mahasiswa(request):
+    return render(request,'papi/timeline.html')
