@@ -84,7 +84,7 @@ def dashboard_mhs(request):
     pkms = ProposalPKM.objects.filter(idUsers=request.user).order_by('-createdDate').first()
     anggota = Anggota.objects.filter(idKetua=request.user)
     dospem = DosenPembimbing.objects.filter(idKetua=request.user)
-    print("Id:",pkms.pk,"Judul:",pkms.judul,"Jumlah Anggota:",anggota.count())
+    # print("Id:",pkms.pk,"Judul:",pkms.judul,"Jumlah Anggota:",anggota.count())
     context={
         'pkms':pkms,
         'anggota':anggota,
