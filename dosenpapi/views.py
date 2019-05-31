@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from papi.models import ProposalPKM
-from .forms import DownloadForm
+from .forms import DownloadForm,UploadRevisiForm
 from users.models import Dosen
 import os
 from django.conf import settings
@@ -47,6 +47,23 @@ def download_pkm(request, path):
             response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
             return response
     raise Http404
-def upload_revisi(request):
-
-    return redirect('list-pkm-dosen',idStatus=1)
+def upload_revisi(request,idProposal):
+    pkm = get_object_or_404(ProposalPKM, pk=idProposal)
+    print(pkm)
+    if request.method == 'POST':
+        d_form = UploadRevisiForm(request.POST,request.FILES, instance=pkm)
+        status = request.POST.get('idStatus')
+        idKetua = request.POST.get('idKetua')
+        if d_form.is_valid():
+            dform = d_form.save(commit=False)
+            dform.idKetua = idKetua
+            dform.idStatus = status
+            dform.save()
+            return redirect('list-pkm-pengurus')
+    else:
+        d_form = UploadRevisiForm()
+    context = {
+        'pkm':pkm,
+        'd_form':d_form
+    }
+    return render(request,'dosenpapi/upload_revisi.html',context)

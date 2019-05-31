@@ -80,13 +80,12 @@
                             <td>{{ foo.idStatus.namaStatus }}</td>
                             <td>
 {#                                {% url 'download-pkm' path=foo.document.path idPkm=foo.pk %}#}
-                                <form action="{% url 'list-pkm-dosen' idStatus=1 %}">
+                                <form action="{% url 'list-pkm-dosen' idStatus=1 %}" method="POST">
                                     {% csrf_token %}
 {#                                    <p>{{ foo.document.path }}</p>#}
                                     <input type="hidden" id="idPkm" name="idPkm" value="{{ foo.pk }}">
                                     <input type="hidden" id="idStatus" name="idStatus" value="2">
                                     <input type="hidden" id="path" name="path" value="{{ foo.document.path }}">
-
                                     <input type="submit" name="submit" id="login-submit" tabindex="4"
                                            class="form-control btn-lg btn-dark" value="Download">
                                 </form>

@@ -59,7 +59,7 @@ def manage_pkm(request):
     return render(request, 'bempapi/manage_dosen.html', context)
 def manage_dosen(request,idPkm):
     pkm = get_object_or_404(ProposalPKM,pk = idPkm)
-    dosens = Dosen.objects.filter(bidang=pkm.idBidang.pk)
+    dosens = Dosen.objects.filter(bidang=pkm.idKategori.pk)
     if request.method == 'POST':
         d_form = InputDosenReviewer(request.POST,instance=pkm)
         if d_form.is_valid():

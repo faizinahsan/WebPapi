@@ -52,8 +52,19 @@
                                 <td>{{ pkm.idKategori.namaKategori }}</td>
                                 <td>{{ pkm.judul }}</td>
                                 {% if pkm.idStatus != 3 %}
-                                    <td><button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Download</button></td>
-                                    <td><button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Upload Revisi</button></td>
+                                    <form action="{% url 'list-pkm-dosen' idStatus=1 %}" method="POST">
+                                        <td>
+                                            {% csrf_token %}
+                                            {#                                    <p>{{ foo.document.path }}</p>#}
+                                            <input type="hidden" id="idPkm" name="idPkm" value="{{ pkm.pk }}">
+                                            <input type="hidden" id="idStatus" name="idStatus" value="2">
+                                            <input type="hidden" id="path" name="path" value="{{ pkm.document.path }}">
+                                            <button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Download</button>
+                                        </td>
+                                    </form>
+                                    <td>
+                                        <a href="{% url 'upload-revisi' idProposal=pkm.pk %}"><button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Upload Revisi</button></a>
+                                    </td>
                                 {% endif %}
                             </tr>
                         {% endfor %}

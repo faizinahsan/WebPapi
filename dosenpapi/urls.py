@@ -6,4 +6,5 @@ urlpatterns = [
     path('',views.dashboard_dosen,name='dashboard-dosen'),
     path('list-pkm-dosen/<idStatus>/',views.list_pkm_dosen,name='list-pkm-dosen'),
     path('download-pkm/<path>/', views.download_pkm, name='download-pkm'),
+    path('upload-revisi/<idProposal>/', views.upload_revisi, name='upload-revisi'),
 ]
