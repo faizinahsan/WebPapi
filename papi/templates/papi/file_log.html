@@ -2,6 +2,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -13,16 +14,22 @@
     <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
     <link rel="icon" href="{% static 'papi/img/Logo.png' %}">
 </head>
+
 <body>
-{% block content %}
-    <div class="container-fluid text-center" style="background-image: url({% static 'papi/img/Head.jpg' %});background-position: top;background-size: auto;">
+    {% block content %}
+    <div class="container-fluid text-center"
+        style="background-image: url({% static 'papi/img/Head.jpg' %});background-position: top;background-size: auto;">
         <div style="min-height: 330px;"></div>
     </div>
-    <div class="login-clean" style="background-color: #FAF1E8;">
-        <div class="container" style="min-width: 80%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 7%">
+
+    <form action="{% url 'log-file'%}" method="POST" class="login-clean" style="background-color: #FAF1E8;">
+        {% csrf_token %}
+        <div class="container"
+            style="min-width: 80%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 7%">
             <div class="form-row">
                 <div class="col">
-                    <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Jangan Lupa Cek Proposal Secara Berkala Ya!<br></p>
+                    <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Jangan Lupa Cek
+                        Proposal Secara Berkala Ya!<br></p>
                 </div>
             </div>
             <div class="illustration">
@@ -32,38 +39,36 @@
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
-                        <tr>
-                            <th scope="col" style="color: #70c7e2">File Log</th>
-                        </tr>
+                            <tr>
+                                <th scope="col" style="color: #70c7e2">File Log</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">26-3-2019</th>
-                            <td>18:30</td>
-                            <td>Proposal Terupload</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">26-3-2019</th>
-                            <td>20:30</td>
-                            <td>Proposal diterima dosen</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">27-3-2019</th>
-                            <td>09:45</td>
-                            <td>Proposal sedang direvisi</td>
+                            {% for log in logHistory %}
+                            <tr>
+                                <th scope="row">{{log.tanggal}}</th>
+                                <td>{{log.idProposalPkm.judul}}</td>
+                                <td>{{log.deskripsiLog}}</td>
+                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
             </div>
-            <div class="container"><button class="btn btn-primary btn-block" type="submit" style="background-color: #ffa883; margin-bottom: 50px">Download Revisi</button></div>
+            <div class="container">
+                <input type="hidden" name="status" value={{fileRevisi.documentRevisi.path}}>
+                <button type="submit" class="btn btn-primary btn-block" type="submit"
+                    style="background-color: #ffa883; margin-bottom: 50px">Download Revisi</button>
+            </div>
             <div class="form-row justify-content-center">
             </div>
         </div>
-    </div>
+    </form>
 
 
-{% endblock %}
-<script src="{% static 'papi/js/jquery.min.js' %}"></script>
-<script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
+    {% endblock %}
+    <script src="{% static 'papi/js/jquery.min.js' %}"></script>
+    <script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
+
 </html>

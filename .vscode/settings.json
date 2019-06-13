@@ -1,3 +1,48 @@
 {
-    "python.linting.enabled": false
+  "python.linting.enabled": false,
+  "files.associations": {
+    "**/templates/*.html": "django-html",
+    "**/templates/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+  },
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  "beautify.language": {
+    "js": {
+      "type": [
+        "javascript",
+        "json"
+      ],
+      "filename": [
+        ".jshintrc",
+        ".jsbeautifyrc"
+      ]
+      // "ext": ["js", "json"]
+      // ^^ to set extensions to be beautified using the javascript beautifier
+    },
+    "css": [
+      "css",
+      "scss"
+    ],
+    "html": [
+      "htm",
+      "html",
+      "django-html",
+    ]
+    // ^^ providing just an array sets the VS Code file type
+  },
+  "python.venvPath": "/home/faizinahsan/Documents/Python/env/bin/python3",
+  "python.pythonPath": "/home/faizinahsan/Documents/Python/env/bin/python3",
+  "editor.formatOnSave": true,
+  "python.linting.pep8Enabled": true,
+  "python.linting.pylintPath": "/home/faizinahsan/Documents/Python/env/bin/pylint",
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_django"
+  ],
+  "python.linting.pylintEnabled": true,
+  "[python]": {
+    "editor.formatOnSave": true
+  },
 }

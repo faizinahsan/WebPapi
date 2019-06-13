@@ -1,0 +1,32 @@
+{% extends 'papi/base.html' %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'papi/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/Login-Form-Clean.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/Registration-Form-with-Photo.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
+    <link rel="icon" href="{% static 'papi/img/Logo.png' %}">
+</head>
+
+<body>
+    {% block content %}
+    <div class="container-fluid text-center"
+        style="background-image: url({% static 'papi/img/Head.jpg' %});background-position: top;background-size: auto;">
+        <div style="min-height: 330px;"></div>
+    </div>
+    <form class="container-fluid text-center" action="{% url 'upload-format-form' %}" method="POST"
+        enctype="multipart/form-data">
+        {% csrf_token %}
+        {{f_form.as_p}}
+        <button type="submit">Upload Format</button>
+    </form>
+    {% endblock content %}
+</body>
+
+</html>

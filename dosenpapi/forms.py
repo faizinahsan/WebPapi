@@ -8,4 +8,8 @@ class DownloadForm(forms.ModelForm):
 class UploadRevisiForm(forms.ModelForm):
     class Meta:
         model = LogHistoryPKM
-        fields = ('document','idStatus','idKetua','idDosenReviewer',)
+        fields = ('documentRevisi','idProposalPkm','idKetua','deskripsiLog',)
+class LogDownloadForm(forms.ModelForm):
+    class Meta:
+        model = LogHistoryPKM
+        fields = ('idProposalPkm','idKetua','deskripsiLog',)

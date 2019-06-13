@@ -48,8 +48,9 @@ class DosenPembimbing(models.Model):
         return f'{self.namaDosen}'
 class LogHistoryPKM(models.Model):
     tanggal = models.DateTimeField(default=timezone.now)
-    document = models.ForeignKey('ProposalPKM',on_delete=models.CASCADE,null=True)
-    idStatus = models.ForeignKey('StatusRevisi',on_delete=models.CASCADE,null =True)
+    documentRevisi = models.FileField(upload_to='revisi',null=True)
+    deskripsiLog = models.CharField(max_length=50,default="")
+    idProposalPkm = models.ForeignKey('ProposalPKM',on_delete=models.CASCADE,null=True)
     idKetua = models.ForeignKey(User,on_delete=models.CASCADE,null =True)
     idDosenReviewer = models.ForeignKey(Dosen,on_delete=models.CASCADE,null=True)
 class CobaMultipleInput(models.Model):

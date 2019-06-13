@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from papi.models import ProposalPKM
-from .forms import DownloadForm,UploadRevisiForm
+from .forms import DownloadForm,UploadRevisiForm,LogDownloadForm
 from users.models import Dosen
 import os
 from django.conf import settings
@@ -26,8 +26,10 @@ def list_pkm_dosen(request,idStatus):
         idPkm = request.POST.get('idPkm')
         pkm = get_object_or_404(ProposalPKM, pk=idPkm)
         d_form = DownloadForm(request.POST,instance=pkm)
+        l_form = LogDownloadForm(request.POST)
         if d_form.is_valid():
             d_form.save()
+            l_form.save()
             print(status,path,pkm)
             return download_pkm(request,path)
     else:
@@ -37,6 +39,7 @@ def list_pkm_dosen(request,idStatus):
         'pkms':pkms,
         'form':d_form,
         'dosen':dosen,
+        'idStatus':idStatus,
     }
     return render(request,'dosenpapi/list_pkm_dosen.html',context)
 def download_pkm(request, path):
@@ -51,15 +54,18 @@ def upload_revisi(request,idProposal):
     pkm = get_object_or_404(ProposalPKM, pk=idProposal)
     print(pkm)
     if request.method == 'POST':
-        d_form = UploadRevisiForm(request.POST,request.FILES, instance=pkm)
+        d_form = UploadRevisiForm(request.POST,request.FILES)
+        # To Update idStatus Change
+        p_form = DownloadForm(request.POST,instance=pkm)
         status = request.POST.get('idStatus')
         idKetua = request.POST.get('idKetua')
+        print(request.user.dosen)
         if d_form.is_valid():
             dform = d_form.save(commit=False)
-            dform.idKetua = idKetua
-            dform.idStatus = status
+            dform.idDosenReviewer = request.user.dosen
             dform.save()
-            return redirect('list-pkm-pengurus')
+            p_form.save()
+            return redirect('list-pkm-dosen',idStatus=3)
     else:
         d_form = UploadRevisiForm()
     context = {

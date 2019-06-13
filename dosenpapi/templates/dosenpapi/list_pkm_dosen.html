@@ -51,7 +51,8 @@
                                 <td>{{ pkm.idBidang.namaBidang }}</td>
                                 <td>{{ pkm.idKategori.namaKategori }}</td>
                                 <td>{{ pkm.judul }}</td>
-                                {% if pkm.idStatus != 3 %}
+                                <td>{{ pkm.idStatus.pk }}</td>
+                                {% if pkm.idStatus.pk != 3 %}
                                     <form action="{% url 'list-pkm-dosen' idStatus=1 %}" method="POST">
                                         <td>
                                             {% csrf_token %}
@@ -59,6 +60,9 @@
                                             <input type="hidden" id="idPkm" name="idPkm" value="{{ pkm.pk }}">
                                             <input type="hidden" id="idStatus" name="idStatus" value="2">
                                             <input type="hidden" id="path" name="path" value="{{ pkm.document.path }}">
+                                            <input type="hidden" id="idProposalPkm" name="idProposalPkm" value="{{pkm.pk}}">
+                                            <input type="hidden" id="idKetua" name="idKetua" value="{{pkm.idUsers.pk}}">
+                                            <input type="hidden" id="deskripsiLog" name="deskripsiLog" value="Proposal Sedang DiRevisi">
                                             <button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Download</button>
                                         </td>
                                     </form>
