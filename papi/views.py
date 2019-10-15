@@ -40,6 +40,33 @@ def upload_pkm(request):
     return render(request, 'papi/uploadDashboard_mhs.html', context)
 
 
+def update_pkm(request, idUsers):
+    # proposal = ProposalPKM.objects.filter(idUsers=idUsers).first
+    proposal = get_object_or_404(ProposalPKM, idUsers=idUsers)
+    bidang = BidangPKM.objects.all()
+    kategori = KategoriPKM.objects.all()
+    fakultas = Fakultas.objects.all()
+    if request.method == 'POST':
+        form = UploadPKMForm(request.POST, request.FILES, instance=proposal)
+        # l_form = LogHistoryUploadForm(request.POST)
+        if form.is_valid():
+            u_form = form.save(commit=False)
+            u_form.idUsers = request.user
+            u_form.save()
+            return redirect('dashboard-mhs')
+    else:
+        form = UploadPKMForm()
+    context = {
+        'u_form': form,
+        'pkms': proposal,
+        'idUsers': idUsers,
+        'bidang': bidang,
+        'kategori': kategori,
+        'fakultas': fakultas,
+    }
+    return render(request, 'papi/updateDashboard_mhs.html', context)
+
+
 @login_required
 def input_anggota(request):
     if request.method == 'POST':
