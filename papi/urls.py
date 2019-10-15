@@ -16,5 +16,6 @@ urlpatterns = [
     path('timeline-mahasiswa', views.timeline_mahasiswa, name='timeline-mahasiswa'),
     path('download_revisi/<path>/',
          views.download_revisi, name='download-revisi'),
+    path('update/<idUsers>', views.update_pkm, name='update-pkm'),
 
 ]

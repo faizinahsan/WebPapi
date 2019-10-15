@@ -33,9 +33,9 @@
     // ^^ providing just an array sets the VS Code file type
   },
   "python.venvPath": "/home/faizinahsan/Documents/Python/env/bin/python3",
-  "python.pythonPath": "/home/faizinahsan/Documents/Python/env/bin/python3",
+  "python.pythonPath": "D:\\SEMESTER 7\\PPL II\\Webpapi\\papivirtualenv\\papivenv\\Scripts\\python.exe",
   "editor.formatOnSave": true,
-  "python.linting.pep8Enabled": true,
+  "python.linting.pycodestyleEnabled": true,
   "python.linting.pylintPath": "/home/faizinahsan/Documents/Python/env/bin/pylint",
   "python.linting.pylintArgs": [
     "--load-plugins",

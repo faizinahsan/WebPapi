@@ -1,0 +1,88 @@
+{% extends 'papi/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>WebPapi</title>
+
+    <link rel="stylesheet" href="{% static 'papi/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/Login-Form-Clean.css'%}">
+    <link rel="stylesheet" href="{% static 'papi/css/Registration-Form-with-Photo.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
+</head>
+
+<body>
+
+    </div>
+    </div>
+    {% block content %}
+    <div class="login-clean" style="background-color: #FAF1E8;">
+        <form class="border rounded" method="POST" enctype="multipart/form-data"
+            action="{% url 'update-pkm' idUsers=idUsers %}" style="min-width: 900px;background-color: #FDE3C8;">
+            {% csrf_token %}
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"></div>
+            <div class="form-row">
+                <div class="col">
+                    <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Kamu punya proposal
+                        PKM yang ingin diajukan?<br></p>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Ayo Upload
+                        Sekarang!<br></p>
+                </div>
+            </div>
+            <div class="form-group"><input class="form-control" value="{{pkms.judul}}" type="hidden" name="judul"
+                    placeholder="Judul PKM" style="background-color: #e5e5e5;"></div>
+            <div class="form-group"><input class="form-control" value="{{pkms.namaKetua}}" type="hidden"
+                    name="namaKetua" placeholder="Nama Ketua" style="background-color: #e5e5e5;"></div>
+            <div class="form-group"><input class="form-control" value="{{pkms.deskripsi}}" type="hidden"
+                    name="deskripsi" placeholder="Deskripsi" style="background-color: #e5e5e5;"></div>
+            <input type="hidden" name="idStatus" value="{{pkms.idStatus.pk}}">
+            <label>File PKM (.docx)</label>
+            <input class="form-control" type="file" name="document" placeholder="uploadPKM"
+                style="background-color: #e5e5e5;">
+            <input type="hidden" id="idDosenReviewer" name="idDosenReviewer" value="{{pkms.idDosenReviewer.pk}}">
+            <input type="hidden" name="idBidang" value="{{pkms.idBidang.pk}}">
+            <input type="hidden" name="idKategori" value="{{pkms.idKategori.pk}}">
+            <input type="hidden" name="idFakultas" value="{{pkms.idFakultas.pk}}">
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit"
+                    style="background-color: #ffa883;">Upload Proposal PKM</button></div>
+            {% if u_form.errors %}
+            <p>{{ u_form.errors }}</p>
+            {% endif %}
+        </form>
+
+        <div class="form-row justify-content-center">
+            <div class="col-4 col-xl-12 text-center">
+                <p class="text-center" style="font-size: 20px;"><br>Lorem ipsum dolor sit amet, consectetur
+                    <br>adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. <br>Ut
+                    enim ad minim veniam, quis nostrud <br>exercitation ullamco laboris nisi ut aliquip <br>ex
+                    ea commodo consequat. Duis aute irure.<br><br></p>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    <div class="container-fluid text-center d-inline-block"
+        style="background-image: url(&quot;assets/img/Head.jpg&quot;);background-position: top;background-size: contain;">
+        <div style="min-height: 200px;"></div>
+
+    </div>
+    <div class="container-fluid text-center d-inline-block"
+        style="background-image: url(&quot;assets/img/FooterRevisi.png&quot;);background-position: top;background-size: contain;">
+        <div style="min-height: 50px;"></div>
+        <p style="font-size: 30px;font-weight: bold;color: #ffffff;">Cyber Developer</p>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
