@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
 from users.models import Fakultas,Jurusan,Dosen
+from papi.validators import validate_file_extension
 User = get_user_model() 
 
 # Create your models here.
@@ -10,7 +11,7 @@ class ProposalPKM(models.Model):
     namaKetua = models.CharField(max_length=50)
     deskripsi = models.TextField(default = '')
     createdDate = models.DateTimeField(default=timezone.now)
-    document = models.FileField(upload_to='proposal',default = 'ProposalDefault.txt')
+    document = models.FileField(upload_to='proposal',default = 'ProposalDefault.txt',validators=[validate_file_extension])
     idUsers = models.ForeignKey(User, on_delete=models.CASCADE)
     idDosenReviewer = models.ForeignKey(Dosen,on_delete=models.CASCADE,default=1)
     idKategori = models.ForeignKey('KategoriPKM',on_delete=models.CASCADE,default=1)

@@ -40,9 +40,9 @@
         <div class="form-group"><input class="form-control" type="text" name="namaKetua" placeholder="Nama Ketua" style="background-color: #e5e5e5;"></div>
         <div class="form-group"><input class="form-control" type="text" name="deskripsi" placeholder="Deskripsi" style="background-color: #e5e5e5;"></div>
         <label>File PKM (.docx)</label>
-        <input class="form-control" type="file" name="document" placeholder="uploadPKM" style="background-color: #e5e5e5;">
+        <input class="form-control" type="file" name="document" accept=".doc, .docx" placeholder="uploadPKM" style="background-color: #e5e5e5;">
 
-        <select class="custom-select my-1 mr-sm-2" name="idFakultas" id="inlineFormMhsSelectBidang" style="background-color: #e5e5e5";>
+        <select class="custom-select my-1 mr-sm-2" name="idFakultas" id="inlineFormMhsSelectKategorirmMhsSelectBidang" style="background-color: #e5e5e5";>
             <option selected>Fakultas</option>
             {% for fakulta in fakultas %}
                 <option value="{{ fakulta.pk }}">{{ fakulta.namaFakultas }}</option>
