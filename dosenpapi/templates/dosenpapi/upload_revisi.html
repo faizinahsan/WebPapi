@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
     <link rel="icon" href="{% static 'papi/img/Logo.png' %}">
 </head>
+<!-- OK siap -->
 
 <body>
     {% block content %}
@@ -25,18 +26,18 @@
                     style="min-width: 60%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px;margin-top: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 18%">
                     {% csrf_token %}
                     {% if d_form.errors %}
-                        {% for field in d_form %}
-                            {% for error in field.errors %}
-                                <div class="alert alert-danger">
-                                    <strong>{{field.name}} {{ error|escape }}</strong>
-                                </div>
-                            {% endfor %}
-                        {% endfor %}
-                        {% for error in d_form.non_field_errors %}
-                            <div class="alert alert-danger">
-                                <strong>{{ error|escape }}</strong>
-                            </div>
-                        {% endfor %}
+                    {% for field in d_form %}
+                    {% for error in field.errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{field.name}} {{ error|escape }}</strong>
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
+                    {% for error in d_form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                    {% endfor %}
                     {% endif %}
                     <div class="illustration">
                         <div><img src="{% static 'papi/img/Login.jpg' %}" class="center"></div>
@@ -52,7 +53,8 @@
                     <div class="control-group">
                         <label class="control-label" for="filebutton">Upload Revisi (.docx)</label>
                         <div class="controls">
-                            <input id="filebutton" name="documentRevisi" class="input-file" type="file">
+                            <input id="filebutton" name="documentRevisi" class="input-file" type="file"
+                                accept=".doc, .docx">
                         </div>
                     </div>
                     <input type="hidden" name="idProposalPkm" value="{{pkm.pk}}">

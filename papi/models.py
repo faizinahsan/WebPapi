@@ -4,7 +4,7 @@ from django.utils import timezone
 from users.models import Fakultas,Jurusan,Dosen
 from papi.validators import validate_file_extension
 User = get_user_model() 
-
+# Mantap jiwa
 # Create your models here.
 class ProposalPKM(models.Model):
     judul = models.CharField(max_length =50)

@@ -5,3 +5,4 @@ def validate_file_extension(value):
     valid_extensions = ['.doc', '.docx']
     if not ext.lower() in valid_extensions:
         raise ValidationError(u'Unsupported file .')
+# Ini juga sama cmn perubahan dikit

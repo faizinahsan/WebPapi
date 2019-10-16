@@ -10,7 +10,7 @@ from django.conf import settings
 from django.http import HttpResponse, Http404
 
 User = get_user_model()
-
+# Mantap ini cumana perubahan biasa
 
 def index(request):
     return render(request, 'papi/index.html')
