@@ -49,7 +49,7 @@ class DosenPembimbing(models.Model):
         return f'{self.namaDosen}'
 class LogHistoryPKM(models.Model):
     tanggal = models.DateTimeField(default=timezone.now)
-    documentRevisi = models.FileField(upload_to='revisi',null=True)
+    documentRevisi = models.FileField(upload_to='revisi',null=True,validators=[validate_file_extension])
     deskripsiLog = models.CharField(max_length=50,default="")
     idProposalPkm = models.ForeignKey('ProposalPKM',on_delete=models.CASCADE,null=True)
     idKetua = models.ForeignKey(User,on_delete=models.CASCADE,null =True)
