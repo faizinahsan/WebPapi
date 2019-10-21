@@ -123,9 +123,14 @@ def log_file(request):
     fileRevisi = LogHistoryPKM.objects.filter(
         idKetua=request.user).order_by('-tanggal').first()
     status = request.POST.get('status')
-    if status == fileRevisi.documentRevisi.path:
-        path = fileRevisi.documentRevisi.path
-        return download_revisi(request, path)
+    print(fileRevisi)
+    if fileRevisi == None:
+        pass
+    else:
+        print("WOW ADA")
+        if status == fileRevisi.documentRevisi.path:
+            path = fileRevisi.documentRevisi.path
+            return download_revisi(request, path)
     proposal = ProposalPKM.objects.filter(idUsers=p_user).first()
     context = {
         'logHistory': logHistory,
