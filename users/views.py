@@ -1,13 +1,15 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
-from .forms import RegistrationForm,MahasiswaRegisForm,DosenRegisForm
+from .forms import RegistrationForm, MahasiswaRegisForm, DosenRegisForm
 from django.contrib import messages
-from .models import Fakultas,Jurusan
+from .models import Fakultas, Jurusan, Mahasiswa
 from papi.models import KategoriPKM
 from django.contrib.auth import get_user_model
 User = get_user_model()
 # Create your views here.
 # For Student
+
+
 def register(request):
     fakultas = Fakultas.objects.all()
     jurusan = Jurusan.objects.all()
@@ -17,12 +19,18 @@ def register(request):
         if form.is_valid() and m_form.is_valid():
             user = form.save()
             email = form.cleaned_data.get('email')
-            user.refresh_from_db()  
+            user.refresh_from_db()
             user.email = email
-            user.mahasiswa.npm = m_form.cleaned_data.get('npm')
-            user.mahasiswa.fakultas = m_form.cleaned_data.get('fakultas')
-            user.mahasiswa.jurusan = m_form.cleaned_data.get('jurusan')
-            user.save()            
+            try:
+                user.mahasiswa.npm = m_form.cleaned_data.get('npm')
+                user.mahasiswa.fakultas = m_form.cleaned_data.get('fakultas')
+                user.mahasiswa.jurusan = m_form.cleaned_data.get('jurusan')
+            except Mahasiswa.DoesNotExist:
+                messages.success(
+                    request, f'You Haven\'t agree with the terms!')
+                return redirect('register')
+            user.save()
+
             # form_user = form.save(commit=False)
             # form_user.is_student = True
             # form_user.save()
@@ -31,7 +39,7 @@ def register(request):
             # new_formfile = form.save(commit=False)
             # new_formfile.is_activate = true
             # new_formfile.save()
-            messages.success(request,f'Account created for {email}!')
+            messages.success(request, f'Account created for {email}!')
             return redirect('index')
         else:
             print("Error di form")
@@ -39,12 +47,14 @@ def register(request):
         form = RegistrationForm()
         m_form = MahasiswaRegisForm()
     context = {
-        'form':form,
-        'm_form':m_form,
-        'jurusan':jurusan,
-        'fakultas':fakultas,
+        'form': form,
+        'm_form': m_form,
+        'jurusan': jurusan,
+        'fakultas': fakultas,
     }
-    return render(request,'users/register.html',context)
+    return render(request, 'users/register.html', context)
+
+
 def register_dosen(request):
     fakultas = Fakultas.objects.all()
     bidang = KategoriPKM.objects.all()
@@ -60,7 +70,7 @@ def register_dosen(request):
             user.dosen.bidang = m_form.cleaned_data.get('bidang')
             user.dosen.fakultas = m_form.cleaned_data.get('fakultas')
             user.save()
-            messages.success(request,f'Account created for {email}!')
+            messages.success(request, f'Account created for {email}!')
             return redirect('index')
         else:
             print("Error di form")
@@ -68,11 +78,13 @@ def register_dosen(request):
         form = RegistrationForm()
         m_form = DosenRegisForm()
     context = {
-        'form':form,
-        'm_form':m_form,
-        'fakultass':fakultas,
-        'bidangs':bidang,
+        'form': form,
+        'm_form': m_form,
+        'fakultass': fakultas,
+        'bidangs': bidang,
     }
-    return render(request,'users/registerdosen.html',context)
+    return render(request, 'users/registerdosen.html', context)
+
+
 def profie_mahasiswa(request):
-    return render(request,'users/profil.html')
+    return render(request, 'users/profil.html')

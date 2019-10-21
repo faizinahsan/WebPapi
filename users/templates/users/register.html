@@ -2,6 +2,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -13,54 +14,81 @@
     <link rel="stylesheet" href="{% static 'papi/fonts/ionicons.min.css'%}">
     <link rel="stylesheet" href="{% static 'papi/css/Login-Form-Clean.css' %}">
 </head>
+
 <body>
-{% block content %}
+    {% block content %}
     <div class="register-photo" style="background-color: #FAF1E8;">
+        {% if form.errors %}
+        {% for field in form %}
+        {% for error in field.errors %}
+        <div class="alert alert-danger">
+            <strong>{{field.name}} {{ error|escape }}</strong>
+        </div>
+        {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
         <div class="login-clean" style="background-color: #FAF1E8;">
             <div class="form-container" style="background-color: #FDE3C8;">
-                <form class="border rounded" method="POST" action="{% url 'register' %}" style="min-width: 60%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px;margin-top: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 18%">
+                <form class="border rounded" method="POST" action="{% url 'register' %}"
+                    style="min-width: 60%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px;margin-top: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 18%">
                     {% csrf_token %}
                     <div class="illustration">
                         <div><img src="{% static 'papi/img/Login.jpg' %}" class="center"></div>
                     </div>
-                    <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username" style="background-color: #f0f9fc;"></div>
-                    <div class="form-group"><input class="form-control" type="text" name="first_name" placeholder="First Name" style="background-color: #f0f9fc;"></div>
-                    <div class="form-group"><input class="form-control" type="text" name="last_name" placeholder="Last Name" style="background-color: #f0f9fc;"></div>
-                    <div class="form-group"><input class="form-control" type="number" name="npm" placeholder="NPM"  style="background-color: #f0f9fc;"></div>
+                    <!-- <div class="form-group"><input class="form-control" type="text" name="username"
+                            placeholder="Username" style="background-color: #f0f9fc;"></div> -->
+                    <div class="form-group"><input class="form-control" type="text" name="first_name"
+                            placeholder="First Name" style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="text" name="last_name"
+                            placeholder="Last Name" style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="number" name="npm" placeholder="NPM"
+                            style="background-color: #f0f9fc;"></div>
                     <div class="form-group"><label class="text-center" style="font-weight: normal;">Fakultas</label>
                         <select class="form-control" name="fakultas" style="background-color: #f0f9fc;">
                             <optgroup label="Fakultas">
                                 {% for fa in fakultas %}
                                 <option value="{{ fa.pk }}" selected="">{{ fa.namaFakultas }}</option>
-                            {% endfor %}
+                                {% endfor %}
                             </optgroup>
                         </select>
                     </div>
                     <div class="form-group"><label class="text-center" style="font-weight: normal;">Jurusan</label>
                         <select class="form-control" name="jurusan" style="background-color: #f0f9fc;">
                             <optgroup label="Fakultas">
-                            {% for jur in jurusan %}
+                                {% for jur in jurusan %}
                                 <option value="{{ jur.pk }}" selected="">{{ jur.namaJurusan }}</option>
-                            {% endfor %}
+                                {% endfor %}
                             </optgroup>
                         </select>
                     </div>
-                    <div class="form-group"><input class="form-control" type="number" name="kontak" placeholder="No HP" style="background-color: #f0f9fc;"></div>
-                    <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" style="background-color: #f0f9fc;"></div>
-                    <div class="form-group"><input class="form-control" type="password" name="password1" placeholder="Password" style="background-color: #f0f9fc;"></div>
-                    <div class="form-group"><input class="form-control" type="password" name="password2" placeholder="Password (repeat)" style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="number" name="kontak" placeholder="No HP"
+                            style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"
+                            style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="password" name="password1"
+                            placeholder="Password" style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="password" name="password2"
+                            placeholder="Password (repeat)" style="background-color: #f0f9fc;"></div>
                     <div class="form-group">
-                        <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox" name="is_student">I agree to the license terms.</label></div>
+                        <div class="form-check"><label class="form-check-label"><input class="form-check-input"
+                                    type="checkbox" name="is_student" value="True" style="opacity:100;"></label></div>
                     </div>
-                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: #FFA883;color: #FAF2E8;">Sign Up</button></div><a href="#" class="already">Have an account? Login here.</a>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit"
+                            style="background-color: #FFA883;color: #FAF2E8;">Sign Up</button></div><a href="#"
+                        class="already">Have an account? Login here.</a>
                 </form>
             </div>
         </div>
     </div>
-{% endblock %}
+    {% endblock %}
 
-<script src="{% static 'papi/js/jquery.min.js' %}"></script>
-<script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'papi/js/jquery.min.js' %}"></script>
+    <script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
 
 </html>

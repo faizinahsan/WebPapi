@@ -2,6 +2,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -13,26 +14,33 @@
     <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
     <link rel="icon" href="{% static 'papi/img/Logo.png' %}">
 </head>
+
 <body>
-{% block content %}
+    {% block content %}
 
     <div class="register-photo" style="background-color: #FAF1E8;">
         <div class="login-clean" style="background-color: #FAF1E8;">
             <div class="form-container" style="background-color: #FDE3C8;">
-                <form method="POST" action="{% url 'register-dosen' %}" enctype="multipart/form-data" class="border rounded" style="min-width: 60%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px;margin-top: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 18%">
+                <form method="POST" action="{% url 'register-dosen' %}" enctype="multipart/form-data"
+                    class="border rounded"
+                    style="min-width: 60%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px;margin-top: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 18%">
                     {% csrf_token %}
                     <div class="illustration">
                         <div><img src="{% static 'papi/img/Login.jpg' %}" class="center"></div>
                     </div>
-                    <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username" style="background-color: #f0f9fc;"></div>
-                    <div class="form-group"><input class="form-control" type="text" name="first_name" placeholder="First Name" style="background-color: #f0f9fc;"></div>
-                    <div class="form-group"><input class="form-control" type="text" name="last_name" placeholder="Last Name" style="background-color: #f0f9fc;"></div>
-                    <div class="form-group"><input class="form-control" type="number" name="nip" placeholder="NIP" style="background-color: #f0f9fc;"></div>
+                    <!-- <div class="form-group"><input class="form-control" type="text" name="username"
+                            placeholder="Username" style="background-color: #f0f9fc;"></div> -->
+                    <div class="form-group"><input class="form-control" type="text" name="first_name"
+                            placeholder="First Name" style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="text" name="last_name"
+                            placeholder="Last Name" style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="number" name="nip" placeholder="NIP"
+                            style="background-color: #f0f9fc;"></div>
                     <div class="form-group"><label class="text-center" style="font-weight: normal;">Fakultas</label>
                         <select class="form-control" name="fakultas" style="background-color: #f0f9fc;">
                             <optgroup label="Fakultas">
                                 {% for fakultas in fakultass %}
-                                    <option value="{{ fakultas.pk }}" selected="">{{ fakultas.namaFakultas }}</option>
+                                <option value="{{ fakultas.pk }}" selected="">{{ fakultas.namaFakultas }}</option>
                                 {% endfor %}
                             </optgroup>
                         </select>
@@ -42,33 +50,39 @@
                         <select class="form-control" name="bidang" style="background-color: #f0f9fc;">
                             <optgroup label="Bidang">
                                 {% for bidang in bidangs %}
-                                    <option value="{{ bidang.pk }}">{{ bidang.namaKategori }}</option>
+                                <option value="{{ bidang.pk }}">{{ bidang.namaKategori }}</option>
                                 {% endfor %}
                             </optgroup>
                         </select>
                     </div>
-                    <div class="form-group"><input class="form-control" type="number" name="kontak" placeholder="No HP" style="background-color: #f0f9fc;"></div>
-                    <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" style="background-color: #f0f9fc;"></div>
-                    <div class="form-group"><input class="form-control" type="password" name="password1" placeholder="Password" style="background-color: #f0f9fc;"></div>
-                    <div class="form-group"><input class="form-control" type="password" name="password2" placeholder="Password (repeat)" style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="number" name="kontak" placeholder="No HP"
+                            style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"
+                            style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="password" name="password1"
+                            placeholder="Password" style="background-color: #f0f9fc;"></div>
+                    <div class="form-group"><input class="form-control" type="password" name="password2"
+                            placeholder="Password (repeat)" style="background-color: #f0f9fc;"></div>
                     <div class="checkbox-row">
-                        <input type="checkbox" name="is_teacher" id="id_is_teacher" checked="checked" style="opacity:0;" value="True">
+                        <input type="checkbox" name="is_teacher" id="id_is_teacher" checked="checked" style="opacity:0;"
+                            value="True">
                     </div>
-{#                {{form.as_p}}#}
-{#                {{m_form.as_p}}#}
-                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: #FFA883;color: #FAF2E8;">Daftarkan</button></div>
+                    {#                {{form.as_p}}#}
+                    {#                {{m_form.as_p}}#}
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit"
+                            style="background-color: #FFA883;color: #FAF2E8;">Daftarkan</button></div>
 
                     {% if m_form.errors %}
-                        <p>{{ m_form.errors }} Hai</p>
+                    <p>{{ m_form.errors }} Hai</p>
                     {% endif %}
                 </form>
             </div>
         </div>
     </div>
-{% endblock %}
+    {% endblock %}
 
-<script src="{% static 'papi/js/jquery.min.js' %}"></script>
-<script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'papi/js/jquery.min.js' %}"></script>
+    <script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
 
 </html>

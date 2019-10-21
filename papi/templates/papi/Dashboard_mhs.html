@@ -46,7 +46,7 @@
                                 pedoman terbaru.</p>
                         </div>
                         <div class="card-footer text-center bg-white">
-                            {% if pkms.idStatus.pk == 1 %}
+                            {% if pkms.idStatus.pk == 1 or pkms.idStatus.pk == null%}
                             <a class="btn btn-outline-secondary" href="{% url 'upload-page' %}">Upload</a>
                             {% elif pkms.idStatus.pk == 2 or pkms.idStatus.pk == 3  %}
                             <a class="btn btn-outline-secondary"
