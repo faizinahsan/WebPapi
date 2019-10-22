@@ -38,17 +38,18 @@
   margin-right: auto;">
                         <div class="card-body">
                             <h4 class="card-title" style="text-align: center;">Proposal PKM</h4>
-                            <a href="#" class="btn btn-xs btn-success" style="width: 90px;display: block;
+                            <a href="#" class="btn btn-xl btn-success" style="width: 90px;display: block;
   margin-top: 10px;
   margin-left: auto;
-  margin-right: auto;"><span class="glyphicon glyphicon-ok"></span> Uploaded</a>
+  margin-right: auto;"><span class="glyphicon glyphicon-ok"></span>{{pkms.idStatus.namaStatus}}</a>
+
                             <p class="card-text">Pastikan format proposal yang akan kamu kirim sudah sesuai dengan
                                 pedoman terbaru.</p>
                         </div>
                         <div class="card-footer text-center bg-white">
-                            {% if pkms.idStatus.pk == 1 or pkms.idStatus.pk == null%}
+                            {% if pkms.idStatus.pk == null%}
                             <a class="btn btn-outline-secondary" href="{% url 'upload-page' %}">Upload</a>
-                            {% elif pkms.idStatus.pk == 2 or pkms.idStatus.pk == 3  %}
+                            {% else %}
                             <a class="btn btn-outline-secondary"
                                 href="{% url 'update-pkm' idUsers=pkms.idUsers.pk %}">Perbaharui</a>
                             {% endif %}

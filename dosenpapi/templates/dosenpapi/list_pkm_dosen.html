@@ -2,6 +2,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -13,37 +14,42 @@
     <link rel="stylesheet" href="{% static 'papi/css/styles.css' %}">
     <link rel="icon" href="{% static 'papi/img/Logo.png' %}">
 </head>
+
 <body>
-{% block content %}
-    <div class="container-fluid text-center" style="background-image: url({% static 'papi/img/Head.jpg' %});background-position: top;background-size: auto;">
+    {% block content %}
+    <div class="container-fluid text-center"
+        style="background-image: url({% static 'papi/img/Head.jpg' %});background-position: top;background-size: auto;">
         <div style="min-height: 330px;"></div>
     </div>
     <div class="login-clean" style="background-color: #FAF1E8;">
-        <div class="container" style="min-width: 80%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 7%">
+        <div class="container"
+            style="min-width: 80%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 7%">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"></div>
             <div class="form-row">
                 <div class="col">
-                    <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">List Proposal PKM<br></p>
+                    <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">List Proposal
+                        PKM<br></p>
                 </div>
             </div>
             <div class="container">
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
-                        <tr>
-                            <th scope="col">No.</th>
-                            <th scope="col">Tanggal Upload</th>
-                            <th scope="col">ID</th>
-                            <th scope="col">Kategori</th>
-                            <th scope="col">Bidang</th>
-                            <th scope="col">Judul PKM</th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                        </tr>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Tanggal Upload</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Kategori</th>
+                                <th scope="col">Bidang</th>
+                                <th scope="col">Judul PKM</th>
+                                <th scope="col">Nama Status</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
                         </thead>
                         <tbody>
-                        {% for pkm in pkms %}
+                            {% for pkm in pkms %}
                             <tr>
                                 <th scope="row">{{ forloop.counter }}</th>
                                 <td>14/02/2019</td>
@@ -51,35 +57,40 @@
                                 <td>{{ pkm.idBidang.namaBidang }}</td>
                                 <td>{{ pkm.idKategori.namaKategori }}</td>
                                 <td>{{ pkm.judul }}</td>
-                                <td>{{ pkm.idStatus.pk }}</td>
+                                <td>{{ pkm.idStatus.namaStatus }}</td>
                                 {% if pkm.idStatus.pk != 3 %}
-                                    <form action="{% url 'list-pkm-dosen' idStatus=1 %}" method="POST">
-                                        <td>
-                                            {% csrf_token %}
-                                            {#                                    <p>{{ foo.document.path }}</p>#}
-                                            <input type="hidden" id="idPkm" name="idPkm" value="{{ pkm.pk }}">
-                                            <input type="hidden" id="idStatus" name="idStatus" value="2">
-                                            <input type="hidden" id="path" name="path" value="{{ pkm.document.path }}">
-                                            <input type="hidden" id="idProposalPkm" name="idProposalPkm" value="{{pkm.pk}}">
-                                            <input type="hidden" id="idKetua" name="idKetua" value="{{pkm.idUsers.pk}}">
-                                            <input type="hidden" id="deskripsiLog" name="deskripsiLog" value="Proposal Sedang DiRevisi">
-                                            <button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Download</button>
-                                        </td>
-                                    </form>
+                                <form action="{% url 'list-pkm-dosen' idStatus=1 %}" method="POST">
                                     <td>
-                                        <a href="{% url 'upload-revisi' idProposal=pkm.pk %}"><button class="btn btn-primary" type="submit" style="background-color: #ffa883";>Upload Revisi</button></a>
+                                        {% csrf_token %}
+                                        {#                                    <p>{{ foo.document.path }}</p>#}
+                                        <input type="hidden" id="idPkm" name="idPkm" value="{{ pkm.pk }}">
+                                        <input type="hidden" id="idStatus" name="idStatus" value="2">
+                                        <input type="hidden" id="path" name="path" value="{{ pkm.document.path }}">
+                                        <input type="hidden" id="idProposalPkm" name="idProposalPkm" value="{{pkm.pk}}">
+                                        <input type="hidden" id="idKetua" name="idKetua" value="{{pkm.idUsers.pk}}">
+                                        <input type="hidden" id="deskripsiLog" name="deskripsiLog"
+                                            value="Proposal Sedang DiRevisi">
+                                        <button class="btn btn-primary" type="submit" style="background-color: #ffa883"
+                                            ;>Download</button>
                                     </td>
+                                </form>
+                                <td>
+                                    <a href="{% url 'upload-revisi' idProposal=pkm.pk %}"><button
+                                            class="btn btn-primary" type="submit" style="background-color: #ffa883"
+                                            ;>Upload Revisi</button></a>
+                                </td>
                                 {% endif %}
                             </tr>
-                        {% endfor %}
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-{% endblock %}
-<script src="{% static 'papi/js/jquery.min.js' %}"></script>
-<script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
+    {% endblock %}
+    <script src="{% static 'papi/js/jquery.min.js' %}"></script>
+    <script src="{% static 'papi/bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
+
 </html>
