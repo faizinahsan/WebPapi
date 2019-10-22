@@ -49,7 +49,7 @@
                         <div class="card-footer text-center bg-white">
                             {% if pkms.idStatus.pk == null%}
                             <a class="btn btn-outline-secondary" href="{% url 'upload-page' %}">Upload</a>
-                            {% else %}
+                            {% elif pkms.idStatus.pk == 3%}
                             <a class="btn btn-outline-secondary"
                                 href="{% url 'update-pkm' idUsers=pkms.idUsers.pk %}">Perbaharui</a>
                             {% endif %}
