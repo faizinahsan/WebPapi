@@ -81,6 +81,56 @@ def input_anggota(request):
     return render(request, 'papi/input_anggota.html', {'a_form': a_form})
 
 
+@login_required
+def list_anggota(request, idUser):
+    anggotas = Anggota.objects.filter(idKetua=idUser)
+    context = {
+        'anggotas': anggotas
+    }
+    return render(request, 'papi/list_anggota.html', context)
+
+
+@login_required
+def update_anggota(request, idAnggota):
+    anggota = get_object_or_404(Anggota, pk=idAnggota)
+    if request.method == 'POST':
+        a_form = AnggotaPKMForm(request.POST, instance=anggota)
+        if a_form.is_valid():
+            aform = a_form.save(commit=False)
+            aform.idKetua = request.user
+            aform.save()
+        return redirect('dashboard-mhs')
+    else:
+        a_form = AnggotaPKMForm()
+    return render(request, 'papi/update_anggota.html', {'a_form': a_form, 'anggota': anggota})
+
+    pass
+
+
+@login_required
+def update_dosbim(request, idDosbim):
+    dosbim = get_object_or_404(DosenPembimbing, pk=idDosbim)
+    if request.method == 'POST':
+        a_form = DosenPembimbingForm(request.POST, instance=dosbim)
+        if a_form.is_valid():
+            aform = a_form.save(commit=False)
+            aform.idKetua = request.user
+            aform.save()
+        return redirect('dashboard-mhs')
+    else:
+        a_form = DosenPembimbingForm()
+    return render(request, 'papi/update_dosbim.html', {'a_form': a_form, 'dosbim': dosbim})
+
+
+@login_required
+def view_dosbim(request, idUser):
+    dosbims = DosenPembimbing.objects.filter(idKetua=idUser)
+    context = {
+        'dosbims': dosbims
+    }
+    return render(request, 'papi/view_dosbim.html', context)
+
+
 def coba_multiple_input(request):
     listAnggota = []
     for i in range(0, 5):

@@ -74,8 +74,15 @@
                             {% if anggota.count < pkms.idBidang.jumlahAnggota  %}
                             <a class="btn btn-outline-secondary" href="{% url 'input-anggota' %}">Tambah</a>
                             {% endif %}
-                            <a class="btn btn-outline-secondary" href="#">Ubah</a>
-                            <a class="btn btn-outline-secondary" href="#">Lihat</a>
+                            {% if pkms != null %}
+                            <a class="btn btn-outline-secondary"
+                                href="{% url 'list-anggota' idUser=pkms.idUsers.pk %}">Lihat</a>
+                            {% else %}
+                            <div class="alert alert-dark" role="alert">
+                                Tolong Upload Proposal Terlebih Dahulu
+                            </div>
+                            {% endif %}
+
                         </div>
                     </div>
                 </div>
@@ -95,8 +102,10 @@
                             {% if dospem == null%}
                             <a class="btn btn-outline-secondary" href="{% url 'input-dospem' %}">Tambah</a>
                             {% endif %}
-                            <a class="btn btn-outline-secondary" href="#">Ubah</a>
-                            <a class="btn btn-outline-secondary" href="#">Lihat</a>
+                            {% if dospem != null %}
+                            <a class="btn btn-outline-secondary"
+                                href="{% url 'view-dosbim' idUser=pkms.idUsers.pk %}">Lihat</a>
+                            {%endif%}
                         </div>
                     </div>
                 </div>

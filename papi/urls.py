@@ -17,5 +17,10 @@ urlpatterns = [
     path('download_revisi/<path>/',
          views.download_revisi, name='download-revisi'),
     path('update/<idUsers>', views.update_pkm, name='update-pkm'),
-
+    path('list_anggota/<idUser>', views.list_anggota, name='list-anggota'),
+    path('view_dosbim/<idUser>', views.view_dosbim, name='view-dosbim'),
+    path('update_anggota/<idAnggota>/',
+         views.update_anggota, name='update-anggota'),
+    path('update_dosbim/<idDosbim>/',
+         views.update_dosbim, name='update-dosbim'),
 ]

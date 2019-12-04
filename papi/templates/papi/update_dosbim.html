@@ -23,26 +23,25 @@
         <div style="min-height: 330px;"></div>
     </div>
     <div class="login-clean" style="background-color: #FAF1E8;">
-        <form class="border rounded" method="POST" action="{% url 'input-anggota' %}" enctype="multipart/form-data"
+        <form class="border rounded" method="POST" action="{% url 'update-dosbim' idDosbim=dosbim.pk %}"
+            enctype="multipart/form-data"
             style="min-width: 80%;background-color: #fbead8;margin-top: -50px;margin-bottom: 50px; box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); margin-right: 10%; margin-left: 10%">
             {% csrf_token %}
             <div class="illustration"></div>
             <div class="form-row">
                 <div class="col">
                     <p class="text-center" style="color: #70c7e2;font-size: 30px;font-weight: bold;">Input Data
-                        Anggota<br></p>
+                        Dosen Pembimbing<br></p>
                 </div>
             </div>
-            <div class="form-group"><input class="form-control" type="text" name="namaAnggota" placeholder="Nama"
-                    style="background-color: #f0f9fc;"></div>
-            <div class="form-group"><input class="form-control" type="number" name="npmAnggota" placeholder="NPM"
-                    style="background-color: #f0f9fc;"></div>
-            {#            <div class="form-group"><input class="form-control" type="text" name="emailAnggota" placeholder="Fakultas" style="background-color: #f0f9fc;"></div>#}
-            <div class="form-group"><input class="form-control" type="email" name="emailAnggota" placeholder="E-mail"
-                    style="background-color: #f0f9fc;"></div>
-            {#            {{ a_form.as_p }}#}
+            <div class="form-group"><input class="form-control" value="{{ dosbim.namaDosen }}" type="text"
+                    name="namaDosen" placeholder="Nama" style="background-color: #f0f9fc;"></div>
+            <div class="form-group"><input class="form-control" value="{{ dosbim.nipDosen }}" type="number"
+                    name="nipDosen" placeholder="NIP" style="background-color: #f0f9fc;"></div>
+            <div class="form-group"><input class="form-control" type="email" value="{{ dosbim.emailDosen }}"
+                    name="emailDosen" placeholder="E-mail" style="background-color: #f0f9fc;"></div>
             <div class="form-group"><button class="btn btn-primary btn-block" type="submit"
-                    style="background-color: #ffa883;">Tambahkan</button></div>
+                    style="background-color: #ffa883;">Update</button></div>
 
         </form>
     </div>
