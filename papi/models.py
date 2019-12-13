@@ -1,3 +1,4 @@
+from django.conf import settings  # correct way
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
@@ -5,6 +6,7 @@ from users.models import Fakultas, Jurusan, Dosen
 from papi.validators import validate_file_extension
 User = get_user_model()
 
+base_dir = settings.BASE_DIR
 # Create your models here.
 
 
@@ -14,7 +16,7 @@ class ProposalPKM(models.Model):
     deskripsi = models.TextField(default='')
     createdDate = models.DateTimeField(default=timezone.now)
     document = models.FileField(
-        upload_to='proposal', default='ProposalDefault.txt', validators=[validate_file_extension])
+        upload_to='proposal', default='DefaultFile.docx', validators=[validate_file_extension])
     idUsers = models.ForeignKey(User, on_delete=models.CASCADE)
     idDosenReviewer = models.ForeignKey(
         Dosen, on_delete=models.CASCADE, default=1)
@@ -76,13 +78,16 @@ class DosenPembimbing(models.Model):
 class LogHistoryPKM(models.Model):
     tanggal = models.DateTimeField(default=timezone.now)
     documentRevisi = models.FileField(
-        upload_to='revisi', null=True, validators=[validate_file_extension])
+        upload_to='revisi', default='DefaultFile.docx', validators=[validate_file_extension])
     deskripsiLog = models.CharField(max_length=50, default="")
     idProposalPkm = models.ForeignKey(
         'ProposalPKM', on_delete=models.CASCADE, null=True)
     idKetua = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     idDosenReviewer = models.ForeignKey(
         Dosen, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return f'{self.idKetua,self.idProposalPkm, self.documentRevisi}'
 
 
 class CobaMultipleInput(models.Model):

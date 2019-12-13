@@ -9,6 +9,9 @@ import os
 from django.conf import settings
 from django.http import HttpResponse, Http404
 
+from django.conf import settings  # correct way
+base_dir = settings.MEDIA_ROOT
+
 User = get_user_model()
 
 
@@ -172,15 +175,19 @@ def log_file(request):
     logHistory = LogHistoryPKM.objects.filter(idKetua=request.user)
     fileRevisi = LogHistoryPKM.objects.filter(
         idKetua=request.user).order_by('-tanggal').first()
-    status = request.POST.get('status')
+    filePath = request.POST.get('filePath')
     print(fileRevisi)
-    if fileRevisi == None:
+    print("base dir:"+base_dir)
+    if fileRevisi is None:
         pass
     else:
         print("WOW ADA")
-        if status == fileRevisi.documentRevisi.path:
-            path = fileRevisi.documentRevisi.path
-            return download_revisi(request, path)
+        if fileRevisi.documentRevisi.name != "DefaultFile.docx":
+            if filePath == fileRevisi.documentRevisi.path:
+                path = fileRevisi.documentRevisi.path
+                return download_revisi(request, path)
+        else:
+            pass
     proposal = ProposalPKM.objects.filter(idUsers=p_user).first()
     context = {
         'logHistory': logHistory,

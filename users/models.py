@@ -28,6 +28,9 @@ class Mahasiswa(models.Model):
         'Fakultas', on_delete=models.CASCADE, default=1)
     jurusan = models.ForeignKey('Jurusan', on_delete=models.CASCADE, default=1)
 
+    def __str__(self):
+        return f'{self.user}'
+
 
 class Dosen(models.Model):
     user = models.OneToOneField(
